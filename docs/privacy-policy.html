@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tekamül - Gizlilik Politikası</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; }
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.2em; margin-top: 2em; }
+  .updated { color: #666; font-size: 0.9em; }
+  ul { padding-left: 1.2em; }
+  code { background: #f2f2f2; padding: 2px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<h1>Tekamül - Gizlilik Politikası</h1>
+<p class="updated">Son güncelleme: 16 Temmuz 2026</p>
+
+<p>Bu Gizlilik Politikası, "Tekamül" mobil uygulamasının (bundan sonra "Uygulama") kullanıcı verilerini nasıl işlediğini açıklar.</p>
+
+<h2>1. Mikrofon Verisi</h2>
+<p>Uygulama, Zikir modülündeki frekans/nefes analizi için cihazınızın mikrofonunu kullanır (<code>RECORD_AUDIO</code> izni). Bu ses verisi:</p>
+<ul>
+  <li>Yalnızca cihaz üzerinde, gerçek zamanlı olarak analiz edilir,</li>
+  <li>Hiçbir sunucuya veya üçüncü tarafa gönderilmez,</li>
+  <li>Diske kaydedilmez veya saklanmaz; analiz sonrası bellekten silinir.</li>
+</ul>
+
+<h2>2. Yapay Zeka (AI Mürşid) Özelliği</h2>
+<p>"AI Mürşid" rehberlik özelliği, Google Gemini API'sine yalnızca sayısal/metinsel özet istatistikler gönderir: seviyeniz, toplam odaklanma süreniz, zikir sayınız, son frekans değeriniz ve güncel seriniz (streak). Bu istekte ham ses kaydı veya kimliğinizi doğrudan ifşa eden bilgiler yer almaz. Bu veri işleme, Google'ın kendi gizlilik politikasına tabidir.</p>
+
+<h2>3. Hesap ve Bulut Verisi (Firebase)</h2>
+<p>Uygulama, isteğe bağlı hesap ve bulut senkronizasyonu için Google Firebase (Authentication ve Firestore) kullanır:</p>
+<ul>
+  <li><strong>Anonim giriş:</strong> Onboarding sonrası, kimliğinizi ifşa etmeyen anonim bir Firebase kimliği (uid) oluşturulur.</li>
+  <li><strong>Google ile giriş (isteğe bağlı):</strong> Seçerseniz, Google hesabınızın e-posta adresi ve görünen adı alınır.</li>
+  <li><strong>Bulutta saklanan veriler:</strong> Firestore'da yalnızca şunlar tutulur: uid, (varsa) e-posta ve görünen ad, seçtiğiniz takma ad (nickname), manevi seviyeniz, toplam zikir sayınız ve giriş seriniz. Hassas kişisel veri veya ödeme bilgisi saklanmaz.</li>
+  <li>Verileriniz Google'ın güvenlik kuralları ile korunur; her kullanıcı yalnızca kendi kaydına erişebilir.</li>
+</ul>
+
+<h2>4. Reklamlar (Google AdMob)</h2>
+<p>Uygulama, ücretsiz kullanım deneyimini desteklemek için Google AdMob reklam ağını kullanır. AdMob, reklam kişiselleştirmesi için reklam kimliği (Advertising ID) ve cihaz sinyalleri gibi verileri Google'ın kendi politikaları çerçevesinde toplayabilir. Premium sürüme geçen kullanıcılar için reklamlar tamamen kaldırılır. Detaylar için: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>.</p>
+
+<h2>5. Satın Almalar (Google Play Billing)</h2>
+<p>Premium özelliklerin satın alınması Google Play Billing altyapısı üzerinden gerçekleştirilir. Uygulama; kredi kartı, banka hesabı veya başka bir ödeme bilgisini hiçbir zaman görmez veya saklamaz. Ödeme işlemi tamamen Google Play tarafından yönetilir.</p>
+
+<h2>6. Yerel Veri Depolama</h2>
+<p>İlerleme durumunuz, zikir/odaklanma geçmişiniz ve karar günlükleriniz cihazınızda yerel bir veritabanında (Room/SQLite) saklanır.</p>
+
+<h2>7. Verilerinizi Silme</h2>
+<p>Uygulama içindeki "Tüm Verileri Sıfırla" seçeneğiyle veya uygulamayı cihazınızdan kaldırarak yerel verileriniz silinir. Bulutta (Firestore) saklanan verilerinizin silinmesini istiyorsanız, aşağıdaki e-posta adresinden bize ulaşın; hesabınıza ait tüm bulut kayıtları silinecektir.</p>
+
+<h2>8. Çocukların Gizliliği</h2>
+<p>Uygulama 13 yaş altındaki çocukları hedeflememektedir ve bilerek onlardan veri toplamaz.</p>
+
+<h2>9. Değişiklikler</h2>
+<p>Bu politika zaman zaman güncellenebilir. Önemli değişiklikler bu sayfa üzerinden yayınlanacaktır.</p>
+
+<h2>10. İletişim</h2>
+<p>Sorularınız ve veri silme talepleriniz için: <a href="mailto:zeyneprumeysayorulmaz06@gmail.com">zeyneprumeysayorulmaz06@gmail.com</a></p>
+
+</body>
+</html>
