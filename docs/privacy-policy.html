@@ -1,65 +1,210 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tekamül - Gizlilik Politikası</title>
+<title>Tekamül - Privacy Policy / Gizlilik Politikası</title>
 <style>
-  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; }
-  h1 { font-size: 1.6em; }
-  h2 { font-size: 1.2em; margin-top: 2em; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; max-width: 780px; margin: 0 auto; padding: 24px 20px 60px; line-height: 1.6; color: #1a1a1a; }
+  h1 { font-size: 1.55em; }
+  h2 { font-size: 1.15em; margin-top: 1.8em; }
   .updated { color: #666; font-size: 0.9em; }
   ul { padding-left: 1.2em; }
   code { background: #f2f2f2; padding: 2px 5px; border-radius: 4px; }
+  .lang-switch { position: sticky; top: 0; background: #fff; padding: 12px 0; border-bottom: 1px solid #eee; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .lang-switch button { cursor: pointer; border: 1px solid #ccc; background: #fafafa; border-radius: 20px; padding: 6px 14px; font-size: 0.9em; }
+  .lang-switch button.sel { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+  .lang-content { display: none; }
+  .lang-content.active { display: block; }
+  [dir="rtl"] { text-align: right; }
+  [dir="rtl"] ul { padding-left: 0; padding-right: 1.2em; }
 </style>
 </head>
 <body>
 
-<h1>Tekamül - Gizlilik Politikası</h1>
-<p class="updated">Son güncelleme: 16 Temmuz 2026</p>
+  <div class="lang-switch">
+    <button data-b="tr" class="sel" onclick="setLang('tr')">Türkçe</button>
+    <button data-b="en" onclick="setLang('en')">English</button>
+    <button data-b="ar" onclick="setLang('ar')">العربية</button>
+    <button data-b="id" onclick="setLang('id')">Indonesia</button>
+    <button data-b="ur" onclick="setLang('ur')">اردو</button>
+    <button data-b="ja" onclick="setLang('ja')">日本語</button>
+  </div>
 
-<p>Bu Gizlilik Politikası, "Tekamül" mobil uygulamasının (bundan sonra "Uygulama") kullanıcı verilerini nasıl işlediğini açıklar.</p>
+  <!-- ================= TURKISH ================= -->
+  <div class="lang-content active" data-lang="tr" dir="ltr">
+    <h1>Tekamül - Gizlilik Politikası</h1>
+    <p class="updated">Son güncelleme: 16 Temmuz 2026</p>
+    <p>Bu Gizlilik Politikası, "Tekamül" mobil uygulamasının (bundan sonra "Uygulama") kullanıcı verilerini nasıl işlediğini açıklar.</p>
+    <h2>1. Mikrofon Verisi</h2>
+    <p>Uygulama, Zikir modülündeki frekans/nefes analizi için cihazınızın mikrofonunu kullanır (<code>RECORD_AUDIO</code> izni). Bu ses verisi yalnızca cihaz üzerinde gerçek zamanlı analiz edilir, hiçbir sunucuya gönderilmez, diske kaydedilmez; analiz sonrası bellekten silinir.</p>
+    <h2>2. Yapay Zeka (AI Mürşid)</h2>
+    <p>"AI Mürşid" özelliği, Google Gemini API'sine yalnızca sayısal özet istatistikler gönderir (seviye, odak süresi, zikir sayısı, son frekans, seri). Ham ses veya kimliğinizi doğrudan ifşa eden bilgi gönderilmez. Bu işleme Google'ın gizlilik politikasına tabidir.</p>
+    <h2>3. Hesap ve Bulut Verisi (Firebase)</h2>
+    <p>İsteğe bağlı hesap ve bulut senkronizasyonu için Google Firebase (Authentication ve Firestore) kullanılır. Anonim veya Google ile giriş yapabilirsiniz. Bulutta yalnızca şunlar saklanır: uid, (varsa) e-posta ve görünen ad, takma ad, seviye, toplam zikir sayısı ve seri. Her kullanıcı yalnızca kendi kaydına erişebilir.</p>
+    <h2>4. Reklamlar (Google AdMob)</h2>
+    <p>Ücretsiz sürüm Google AdMob reklamları içerir; AdMob, reklam kimliği ve cihaz sinyalleri toplayabilir. Premium kullanıcılarda reklam yoktur. Detay: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>.</p>
+    <h2>5. Satın Almalar (Google Play Billing)</h2>
+    <p>Premium satın alımlar Google Play Billing üzerinden yapılır. Uygulama kart/ödeme bilgilerinizi hiçbir zaman görmez veya saklamaz; ödemeyi tamamen Google Play yönetir.</p>
+    <h2>6. Yerel Veri Depolama</h2>
+    <p>İlerleme, zikir/odak geçmişi ve kararlarınız cihazınızda yerel bir veritabanında (Room/SQLite) saklanır.</p>
+    <h2>7. Verilerinizi Silme</h2>
+    <p>Uygulama içindeki "Tüm Verileri Sıfırla" seçeneğiyle veya uygulamayı kaldırarak yerel verileriniz silinir. Bulut verilerinizin silinmesi için aşağıdaki e-postadan bize ulaşın.</p>
+    <h2>8. Çocukların Gizliliği</h2>
+    <p>Uygulama 13 yaş altını hedeflemez ve bilerek onlardan veri toplamaz.</p>
+    <h2>9. Değişiklikler</h2>
+    <p>Bu politika zaman zaman güncellenebilir; önemli değişiklikler bu sayfada yayınlanır.</p>
+    <h2>10. İletişim</h2>
+    <p>Sorular ve veri silme talepleri için: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
+  </div>
 
-<h2>1. Mikrofon Verisi</h2>
-<p>Uygulama, Zikir modülündeki frekans/nefes analizi için cihazınızın mikrofonunu kullanır (<code>RECORD_AUDIO</code> izni). Bu ses verisi:</p>
-<ul>
-  <li>Yalnızca cihaz üzerinde, gerçek zamanlı olarak analiz edilir,</li>
-  <li>Hiçbir sunucuya veya üçüncü tarafa gönderilmez,</li>
-  <li>Diske kaydedilmez veya saklanmaz; analiz sonrası bellekten silinir.</li>
-</ul>
+  <!-- ================= ENGLISH ================= -->
+  <div class="lang-content" data-lang="en" dir="ltr">
+    <h1>Tekamül - Privacy Policy</h1>
+    <p class="updated">Last updated: 16 July 2026</p>
+    <p>This Privacy Policy explains how the "Tekamül" mobile application (the "App") handles user data.</p>
+    <h2>1. Microphone Data</h2>
+    <p>The App uses your microphone for frequency/breath analysis in the Dhikr module (<code>RECORD_AUDIO</code> permission). This audio is analyzed only on-device in real time, is never sent to any server or written to disk, and is discarded from memory after analysis.</p>
+    <h2>2. Artificial Intelligence (AI Guide)</h2>
+    <p>The "AI Guide" feature sends only numeric summary statistics to the Google Gemini API (level, focus time, dhikr count, last frequency, streak). No raw audio or directly identifying information is sent. This processing is subject to Google's privacy policy.</p>
+    <h2>3. Account &amp; Cloud Data (Firebase)</h2>
+    <p>Google Firebase (Authentication and Firestore) is used for optional accounts and cloud sync. You may sign in anonymously or with Google. Only the following are stored in the cloud: uid, email and display name (if provided), nickname, level, total dhikr count, and streak. Each user can access only their own record.</p>
+    <h2>4. Ads (Google AdMob)</h2>
+    <p>The free version includes Google AdMob ads; AdMob may collect the advertising ID and device signals. Premium users see no ads. Details: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+    <h2>5. Purchases (Google Play Billing)</h2>
+    <p>Premium purchases are handled via Google Play Billing. The App never sees or stores your card/payment details; payment is managed entirely by Google Play.</p>
+    <h2>6. Local Storage</h2>
+    <p>Your progress, dhikr/focus history, and decisions are stored on your device in a local database (Room/SQLite).</p>
+    <h2>7. Deleting Your Data</h2>
+    <p>You can delete local data via "Reset All Data" in the app or by uninstalling it. To delete your cloud data, contact us at the email below.</p>
+    <h2>8. Children's Privacy</h2>
+    <p>The App does not target children under 13 and does not knowingly collect data from them.</p>
+    <h2>9. Changes</h2>
+    <p>This policy may be updated from time to time; significant changes will be posted on this page.</p>
+    <h2>10. Contact</h2>
+    <p>For questions and data-deletion requests: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
+  </div>
 
-<h2>2. Yapay Zeka (AI Mürşid) Özelliği</h2>
-<p>"AI Mürşid" rehberlik özelliği, Google Gemini API'sine yalnızca sayısal/metinsel özet istatistikler gönderir: seviyeniz, toplam odaklanma süreniz, zikir sayınız, son frekans değeriniz ve güncel seriniz (streak). Bu istekte ham ses kaydı veya kimliğinizi doğrudan ifşa eden bilgiler yer almaz. Bu veri işleme, Google'ın kendi gizlilik politikasına tabidir.</p>
+  <!-- ================= ARABIC ================= -->
+  <div class="lang-content" data-lang="ar" dir="rtl">
+    <h1>تكامُل - سياسة الخصوصية</h1>
+    <p class="updated">آخر تحديث: 16 يوليو 2026</p>
+    <p>توضّح سياسة الخصوصية هذه كيفية تعامل تطبيق "تكامُل" ("التطبيق") مع بيانات المستخدم.</p>
+    <h2>1. بيانات الميكروفون</h2>
+    <p>يستخدم التطبيق الميكروفون لتحليل التردد/التنفّس في وحدة الذكر (إذن <code>RECORD_AUDIO</code>). يُحلَّل الصوت على الجهاز فقط وفي الوقت الحقيقي، ولا يُرسَل إلى أي خادم ولا يُحفَظ على القرص، ويُحذَف من الذاكرة بعد التحليل.</p>
+    <h2>2. الذكاء الاصطناعي (المرشد الذكي)</h2>
+    <p>ترسل ميزة "المرشد الذكي" إحصاءات رقمية موجزة فقط إلى Google Gemini API (المستوى، مدة التركيز، عدد الأذكار، آخر تردد، سلسلة الأيام). لا يُرسَل أي صوت خام أو معلومات تعرّف بك مباشرةً. تخضع هذه المعالجة لسياسة خصوصية Google.</p>
+    <h2>3. بيانات الحساب والسحابة (Firebase)</h2>
+    <p>يُستخدم Google Firebase (المصادقة وFirestore) للحسابات الاختيارية والمزامنة السحابية. يمكنك تسجيل الدخول بشكل مجهول أو عبر Google. يُخزَّن في السحابة فقط: المعرّف uid، والبريد والاسم المعروض (إن وُجدا)، والاسم المستعار، والمستوى، وإجمالي عدد الأذكار، وسلسلة الأيام. يصل كل مستخدم إلى سجلّه فقط.</p>
+    <h2>4. الإعلانات (Google AdMob)</h2>
+    <p>يتضمّن الإصدار المجاني إعلانات Google AdMob؛ وقد يجمع AdMob معرّف الإعلان وإشارات الجهاز. لا يرى مستخدمو النسخة المميّزة أي إعلانات. التفاصيل: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Google</a>.</p>
+    <h2>5. المشتريات (Google Play Billing)</h2>
+    <p>تتم مشتريات النسخة المميّزة عبر Google Play Billing. لا يرى التطبيق بيانات بطاقتك/دفعك ولا يخزّنها أبداً؛ وتُدار المدفوعات بالكامل من Google Play.</p>
+    <h2>6. التخزين المحلي</h2>
+    <p>يُحفَظ تقدّمك وسجلّ الذكر/التركيز وقراراتك على جهازك في قاعدة بيانات محلية (Room/SQLite).</p>
+    <h2>7. حذف بياناتك</h2>
+    <p>يمكنك حذف البيانات المحلية عبر "إعادة تعيين كل البيانات" داخل التطبيق أو بإلغاء تثبيته. لحذف بياناتك السحابية، تواصل معنا على البريد أدناه.</p>
+    <h2>8. خصوصية الأطفال</h2>
+    <p>لا يستهدف التطبيق الأطفال دون 13 عاماً ولا يجمع بياناتهم عن قصد.</p>
+    <h2>9. التغييرات</h2>
+    <p>قد تُحدَّث هذه السياسة من حين لآخر؛ وتُنشَر التغييرات المهمّة على هذه الصفحة.</p>
+    <h2>10. التواصل</h2>
+    <p>للأسئلة وطلبات حذف البيانات: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
+  </div>
 
-<h2>3. Hesap ve Bulut Verisi (Firebase)</h2>
-<p>Uygulama, isteğe bağlı hesap ve bulut senkronizasyonu için Google Firebase (Authentication ve Firestore) kullanır:</p>
-<ul>
-  <li><strong>Anonim giriş:</strong> Onboarding sonrası, kimliğinizi ifşa etmeyen anonim bir Firebase kimliği (uid) oluşturulur.</li>
-  <li><strong>Google ile giriş (isteğe bağlı):</strong> Seçerseniz, Google hesabınızın e-posta adresi ve görünen adı alınır.</li>
-  <li><strong>Bulutta saklanan veriler:</strong> Firestore'da yalnızca şunlar tutulur: uid, (varsa) e-posta ve görünen ad, seçtiğiniz takma ad (nickname), manevi seviyeniz, toplam zikir sayınız ve giriş seriniz. Hassas kişisel veri veya ödeme bilgisi saklanmaz.</li>
-  <li>Verileriniz Google'ın güvenlik kuralları ile korunur; her kullanıcı yalnızca kendi kaydına erişebilir.</li>
-</ul>
+  <!-- ================= INDONESIAN ================= -->
+  <div class="lang-content" data-lang="id" dir="ltr">
+    <h1>Tekamül - Kebijakan Privasi</h1>
+    <p class="updated">Terakhir diperbarui: 16 Juli 2026</p>
+    <p>Kebijakan Privasi ini menjelaskan cara aplikasi seluler "Tekamül" ("Aplikasi") menangani data pengguna.</p>
+    <h2>1. Data Mikrofon</h2>
+    <p>Aplikasi menggunakan mikrofon untuk analisis frekuensi/napas pada modul Dzikir (izin <code>RECORD_AUDIO</code>). Audio hanya dianalisis di perangkat secara real-time, tidak pernah dikirim ke server atau ditulis ke disk, dan dihapus dari memori setelah analisis.</p>
+    <h2>2. Kecerdasan Buatan (Pemandu AI)</h2>
+    <p>Fitur "Pemandu AI" hanya mengirim statistik ringkas berupa angka ke Google Gemini API (level, durasi fokus, jumlah dzikir, frekuensi terakhir, streak). Tidak ada audio mentah atau informasi yang mengidentifikasi Anda secara langsung yang dikirim. Pemrosesan ini tunduk pada kebijakan privasi Google.</p>
+    <h2>3. Data Akun &amp; Cloud (Firebase)</h2>
+    <p>Google Firebase (Authentication dan Firestore) digunakan untuk akun opsional dan sinkronisasi cloud. Anda dapat masuk secara anonim atau dengan Google. Hanya berikut yang disimpan di cloud: uid, email dan nama tampilan (jika ada), nama panggilan, level, total jumlah dzikir, dan streak. Setiap pengguna hanya dapat mengakses catatannya sendiri.</p>
+    <h2>4. Iklan (Google AdMob)</h2>
+    <p>Versi gratis menampilkan iklan Google AdMob; AdMob dapat mengumpulkan ID iklan dan sinyal perangkat. Pengguna premium tidak melihat iklan. Detail: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Kebijakan Privasi Google</a>.</p>
+    <h2>5. Pembelian (Google Play Billing)</h2>
+    <p>Pembelian premium ditangani melalui Google Play Billing. Aplikasi tidak pernah melihat atau menyimpan detail kartu/pembayaran Anda; pembayaran sepenuhnya dikelola oleh Google Play.</p>
+    <h2>6. Penyimpanan Lokal</h2>
+    <p>Kemajuan, riwayat dzikir/fokus, dan keputusan Anda disimpan di perangkat dalam basis data lokal (Room/SQLite).</p>
+    <h2>7. Menghapus Data Anda</h2>
+    <p>Anda dapat menghapus data lokal melalui "Reset Semua Data" di aplikasi atau dengan menghapus instalasinya. Untuk menghapus data cloud, hubungi kami di email di bawah.</p>
+    <h2>8. Privasi Anak</h2>
+    <p>Aplikasi tidak menargetkan anak di bawah 13 tahun dan tidak dengan sengaja mengumpulkan data mereka.</p>
+    <h2>9. Perubahan</h2>
+    <p>Kebijakan ini dapat diperbarui dari waktu ke waktu; perubahan penting akan diposting di halaman ini.</p>
+    <h2>10. Kontak</h2>
+    <p>Untuk pertanyaan dan permintaan penghapusan data: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
+  </div>
 
-<h2>4. Reklamlar (Google AdMob)</h2>
-<p>Uygulama, ücretsiz kullanım deneyimini desteklemek için Google AdMob reklam ağını kullanır. AdMob, reklam kişiselleştirmesi için reklam kimliği (Advertising ID) ve cihaz sinyalleri gibi verileri Google'ın kendi politikaları çerçevesinde toplayabilir. Premium sürüme geçen kullanıcılar için reklamlar tamamen kaldırılır. Detaylar için: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>.</p>
+  <!-- ================= URDU ================= -->
+  <div class="lang-content" data-lang="ur" dir="rtl">
+    <h1>تکامُل - رازداری کی پالیسی</h1>
+    <p class="updated">آخری تازہ کاری: 16 جولائی 2026</p>
+    <p>یہ رازداری پالیسی بتاتی ہے کہ موبائل ایپلیکیشن "تکامُل" ("ایپ") صارف کے ڈیٹا کو کیسے سنبھالتی ہے۔</p>
+    <h2>1. مائیکروفون ڈیٹا</h2>
+    <p>ایپ ذکر ماڈیول میں فریکوئنسی/سانس کے تجزیے کے لیے آپ کا مائیکروفون استعمال کرتی ہے (<code>RECORD_AUDIO</code> اجازت)۔ یہ آڈیو صرف ڈیوائس پر حقیقی وقت میں تجزیہ کیا جاتا ہے، کسی سرور کو نہیں بھیجا جاتا اور نہ ڈسک پر محفوظ ہوتا ہے، اور تجزیے کے بعد میموری سے حذف ہو جاتا ہے۔</p>
+    <h2>2. مصنوعی ذہانت (اے آئی رہنما)</h2>
+    <p>"اے آئی رہنما" فیچر صرف عددی خلاصہ اعداد و شمار Google Gemini API کو بھیجتا ہے (لیول، فوکس دورانیہ، ذکر کی تعداد، آخری فریکوئنسی، اسٹریک)۔ کوئی خام آڈیو یا آپ کی براہِ راست شناخت کرنے والی معلومات نہیں بھیجی جاتی۔ یہ پروسیسنگ Google کی رازداری پالیسی کے تابع ہے۔</p>
+    <h2>3. اکاؤنٹ اور کلاؤڈ ڈیٹا (Firebase)</h2>
+    <p>اختیاری اکاؤنٹس اور کلاؤڈ سنک کے لیے Google Firebase (Authentication اور Firestore) استعمال ہوتا ہے۔ آپ گمنام یا Google کے ذریعے سائن اِن کر سکتے ہیں۔ کلاؤڈ میں صرف یہ محفوظ ہوتا ہے: uid، ای میل اور ڈسپلے نام (اگر ہو)، عرفیت، لیول، کل ذکر کی تعداد، اور اسٹریک۔ ہر صارف صرف اپنے ریکارڈ تک رسائی رکھتا ہے۔</p>
+    <h2>4. اشتہارات (Google AdMob)</h2>
+    <p>مفت ورژن میں Google AdMob اشتہارات شامل ہیں؛ AdMob ایڈورٹائزنگ آئی ڈی اور ڈیوائس سگنلز جمع کر سکتا ہے۔ پریمیم صارفین کو کوئی اشتہار نظر نہیں آتا۔ تفصیل: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google رازداری پالیسی</a>۔</p>
+    <h2>5. خریداری (Google Play Billing)</h2>
+    <p>پریمیم خریداری Google Play Billing کے ذریعے ہوتی ہے۔ ایپ آپ کے کارڈ/ادائیگی کی تفصیلات کبھی نہیں دیکھتی یا محفوظ نہیں کرتی؛ ادائیگی مکمل طور پر Google Play سنبھالتا ہے۔</p>
+    <h2>6. مقامی اسٹوریج</h2>
+    <p>آپ کی پیش رفت، ذکر/فوکس کی تاریخ، اور فیصلے آپ کے ڈیوائس پر ایک مقامی ڈیٹابیس (Room/SQLite) میں محفوظ ہوتے ہیں۔</p>
+    <h2>7. اپنا ڈیٹا حذف کرنا</h2>
+    <p>آپ ایپ میں "تمام ڈیٹا ری سیٹ" کے ذریعے یا اسے اَن اِنسٹال کرکے مقامی ڈیٹا حذف کر سکتے ہیں۔ کلاؤڈ ڈیٹا حذف کرنے کے لیے نیچے دیے گئے ای میل پر رابطہ کریں۔</p>
+    <h2>8. بچوں کی رازداری</h2>
+    <p>ایپ 13 سال سے کم عمر بچوں کو ہدف نہیں بناتی اور جان بوجھ کر ان سے ڈیٹا جمع نہیں کرتی۔</p>
+    <h2>9. تبدیلیاں</h2>
+    <p>یہ پالیسی وقتاً فوقتاً اپ ڈیٹ ہو سکتی ہے؛ اہم تبدیلیاں اسی صفحے پر شائع کی جائیں گی۔</p>
+    <h2>10. رابطہ</h2>
+    <p>سوالات اور ڈیٹا حذف کرنے کی درخواستوں کے لیے: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
+  </div>
 
-<h2>5. Satın Almalar (Google Play Billing)</h2>
-<p>Premium özelliklerin satın alınması Google Play Billing altyapısı üzerinden gerçekleştirilir. Uygulama; kredi kartı, banka hesabı veya başka bir ödeme bilgisini hiçbir zaman görmez veya saklamaz. Ödeme işlemi tamamen Google Play tarafından yönetilir.</p>
+  <!-- ================= JAPANESE ================= -->
+  <div class="lang-content" data-lang="ja" dir="ltr">
+    <h1>Tekamül - プライバシーポリシー</h1>
+    <p class="updated">最終更新日: 2026年7月16日</p>
+    <p>本プライバシーポリシーは、モバイルアプリ「Tekamül」（以下「本アプリ」）がユーザーデータをどのように取り扱うかを説明します。</p>
+    <h2>1. マイクのデータ</h2>
+    <p>本アプリは、ズィクル（Dhikr）モジュールでの周波数・呼吸の解析にマイクを使用します（<code>RECORD_AUDIO</code> 権限）。音声は端末上でリアルタイムに解析されるのみで、サーバーへ送信されることも、ディスクに保存されることもなく、解析後にメモリから破棄されます。</p>
+    <h2>2. 人工知能（AIガイド）</h2>
+    <p>「AIガイド」機能は、Google Gemini API に数値的な統計要約（レベル、集中時間、ズィクル回数、最終周波数、連続日数）のみを送信します。生の音声や個人を直接特定する情報は送信されません。この処理は Google のプライバシーポリシーに従います。</p>
+    <h2>3. アカウントとクラウドデータ（Firebase）</h2>
+    <p>任意のアカウントおよびクラウド同期のために Google Firebase（Authentication と Firestore）を使用します。匿名または Google でサインインできます。クラウドに保存されるのは、uid、（提供された場合）メールと表示名、ニックネーム、レベル、ズィクル合計回数、連続日数のみです。各ユーザーは自分の記録にのみアクセスできます。</p>
+    <h2>4. 広告（Google AdMob）</h2>
+    <p>無料版には Google AdMob 広告が含まれ、AdMob は広告 ID や端末シグナルを収集する場合があります。プレミアムユーザーには広告は表示されません。詳細: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>。</p>
+    <h2>5. 購入（Google Play Billing）</h2>
+    <p>プレミアムの購入は Google Play Billing を通じて行われます。本アプリがカードや支払い情報を見ることも保存することも一切ありません。支払いはすべて Google Play が管理します。</p>
+    <h2>6. ローカル保存</h2>
+    <p>進捗、ズィクル・集中の履歴、および選択の記録は、端末内のローカルデータベース（Room/SQLite）に保存されます。</p>
+    <h2>7. データの削除</h2>
+    <p>アプリ内の「すべてのデータをリセット」またはアンインストールにより、ローカルデータを削除できます。クラウドデータの削除をご希望の場合は、下記メールまでご連絡ください。</p>
+    <h2>8. 子どものプライバシー</h2>
+    <p>本アプリは13歳未満を対象とせず、意図的に情報を収集することはありません。</p>
+    <h2>9. 変更</h2>
+    <p>本ポリシーは随時更新される場合があります。重要な変更は本ページに掲載します。</p>
+    <h2>10. お問い合わせ</h2>
+    <p>ご質問およびデータ削除のご依頼: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
+  </div>
 
-<h2>6. Yerel Veri Depolama</h2>
-<p>İlerleme durumunuz, zikir/odaklanma geçmişiniz ve karar günlükleriniz cihazınızda yerel bir veritabanında (Room/SQLite) saklanır.</p>
-
-<h2>7. Verilerinizi Silme</h2>
-<p>Uygulama içindeki "Tüm Verileri Sıfırla" seçeneğiyle veya uygulamayı cihazınızdan kaldırarak yerel verileriniz silinir. Bulutta (Firestore) saklanan verilerinizin silinmesini istiyorsanız, aşağıdaki e-posta adresinden bize ulaşın; hesabınıza ait tüm bulut kayıtları silinecektir.</p>
-
-<h2>8. Çocukların Gizliliği</h2>
-<p>Uygulama 13 yaş altındaki çocukları hedeflememektedir ve bilerek onlardan veri toplamaz.</p>
-
-<h2>9. Değişiklikler</h2>
-<p>Bu politika zaman zaman güncellenebilir. Önemli değişiklikler bu sayfa üzerinden yayınlanacaktır.</p>
-
-<h2>10. İletişim</h2>
-<p>Sorularınız ve veri silme talepleriniz için: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
+  <script>
+    function setLang(l) {
+      document.querySelectorAll('.lang-content').forEach(function (d) { d.classList.remove('active'); });
+      var target = document.querySelector('.lang-content[data-lang="' + l + '"]');
+      if (target) target.classList.add('active');
+      document.documentElement.setAttribute('dir', (l === 'ar' || l === 'ur') ? 'rtl' : 'ltr');
+      document.documentElement.setAttribute('lang', l);
+      document.querySelectorAll('.lang-switch button').forEach(function (b) {
+        b.classList.toggle('sel', b.getAttribute('data-b') === l);
+      });
+    }
+  </script>
 
 </body>
 </html>
