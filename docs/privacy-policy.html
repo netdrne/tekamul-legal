@@ -3,21 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tekamül - Privacy Policy / Gizlilik Politikası</title>
+<title>Tekâmül — Privacy Policy / Gizlilik Politikası</title>
+<!--
+  Bu sayfa ile app/src/main/java/com/example/data/PrivacyPolicy.kt AYNI metnin iki kopyasıdır.
+  Biri uygulamada çevrimdışı okunabilsin diye, diğeri Play mağaza kaydının işaret ettiği
+  bağlantı için burada. Birini değiştirirken diğerini de değiştirin.
+-->
 <style>
-  body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; max-width: 780px; margin: 0 auto; padding: 24px 20px 60px; line-height: 1.6; color: #1a1a1a; }
-  h1 { font-size: 1.55em; }
-  h2 { font-size: 1.15em; margin-top: 1.8em; }
-  .updated { color: #666; font-size: 0.9em; }
-  ul { padding-left: 1.2em; }
-  code { background: #f2f2f2; padding: 2px 5px; border-radius: 4px; }
-  .lang-switch { position: sticky; top: 0; background: #fff; padding: 12px 0; border-bottom: 1px solid #eee; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
-  .lang-switch button { cursor: pointer; border: 1px solid #ccc; background: #fafafa; border-radius: 20px; padding: 6px 14px; font-size: 0.9em; }
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; max-width: 780px;
+         margin: 0 auto; padding: 20px 20px 60px; line-height: 1.65; color: #1a1a1a; background: #fff; }
+  h1 { font-size: 1.5em; margin-bottom: .2em; }
+  h2 { font-size: 1.08em; margin-top: 1.7em; margin-bottom: .3em; }
+  .updated { color: #666; font-size: .9em; margin-top: 0; }
+  .lead { background: #f6f6f4; border-left: 3px solid #b8963e; padding: 12px 14px; border-radius: 6px; }
+  code { background: #f2f2f2; padding: 2px 5px; border-radius: 4px; font-size: .92em; }
+  a { color: #7a5c12; }
+  .lang-switch { position: sticky; top: 0; background: #fff; padding: 12px 0; border-bottom: 1px solid #eee;
+                 display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .lang-switch button { cursor: pointer; border: 1px solid #ccc; background: #fafafa; border-radius: 20px;
+                        padding: 6px 14px; font-size: .9em; }
   .lang-switch button.sel { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
   .lang-content { display: none; }
   .lang-content.active { display: block; }
   [dir="rtl"] { text-align: right; }
-  [dir="rtl"] ul { padding-left: 0; padding-right: 1.2em; }
+  [dir="rtl"] .lead { border-left: none; border-right: 3px solid #b8963e; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #141317; color: #e8e6ea; }
+    .lang-switch { background: #141317; border-bottom-color: #2a2830; }
+    .lang-switch button { background: #1f1e24; border-color: #3a3742; color: #e8e6ea; }
+    .lang-switch button.sel { background: #e8e6ea; color: #141317; border-color: #e8e6ea; }
+    .lead { background: #1f1e24; }
+    code { background: #26242c; }
+    .updated { color: #9c96a8; }
+    a { color: #e0b654; }
+  }
 </style>
 </head>
 <body>
@@ -33,178 +53,254 @@
 
   <!-- ================= TURKISH ================= -->
   <div class="lang-content active" data-lang="tr" dir="ltr">
-    <h1>Tekamül - Gizlilik Politikası</h1>
-    <p class="updated">Son güncelleme: 16 Temmuz 2026</p>
-    <p>Bu Gizlilik Politikası, "Tekamül" mobil uygulamasının (bundan sonra "Uygulama") kullanıcı verilerini nasıl işlediğini açıklar.</p>
-    <h2>1. Mikrofon Verisi</h2>
-    <p>Uygulama, Zikir modülündeki frekans/nefes analizi için cihazınızın mikrofonunu kullanır (<code>RECORD_AUDIO</code> izni). Bu ses verisi yalnızca cihaz üzerinde gerçek zamanlı analiz edilir, hiçbir sunucuya gönderilmez, diske kaydedilmez; analiz sonrası bellekten silinir.</p>
-    <h2>2. Yapay Zeka (AI Mürşid)</h2>
-    <p>"AI Mürşid" özelliği, Google Gemini API'sine yalnızca sayısal özet istatistikler gönderir (seviye, odak süresi, zikir sayısı, son frekans, seri). Ham ses veya kimliğinizi doğrudan ifşa eden bilgi gönderilmez. Bu işleme Google'ın gizlilik politikasına tabidir.</p>
-    <h2>3. Hesap ve Bulut Verisi (Firebase)</h2>
-    <p>İsteğe bağlı hesap ve bulut senkronizasyonu için Google Firebase (Authentication ve Firestore) kullanılır. Anonim veya Google ile giriş yapabilirsiniz. Bulutta yalnızca şunlar saklanır: uid, (varsa) e-posta ve görünen ad, takma ad, seviye, toplam zikir sayısı ve seri. Her kullanıcı yalnızca kendi kaydına erişebilir.</p>
-    <h2>4. Reklamlar (Google AdMob)</h2>
-    <p>Ücretsiz sürüm Google AdMob reklamları içerir; AdMob, reklam kimliği ve cihaz sinyalleri toplayabilir. Premium kullanıcılarda reklam yoktur. Detay: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>.</p>
-    <h2>5. Satın Almalar (Google Play Billing)</h2>
-    <p>Premium satın alımlar Google Play Billing üzerinden yapılır. Uygulama kart/ödeme bilgilerinizi hiçbir zaman görmez veya saklamaz; ödemeyi tamamen Google Play yönetir.</p>
-    <h2>6. Yerel Veri Depolama</h2>
-    <p>İlerleme, zikir/odak geçmişi ve kararlarınız cihazınızda yerel bir veritabanında (Room/SQLite) saklanır.</p>
-    <h2>7. Verilerinizi Silme</h2>
-    <p>Uygulama içindeki "Tüm Verileri Sıfırla" seçeneğiyle veya uygulamayı kaldırarak yerel verileriniz silinir. Bulut verilerinizin silinmesi için aşağıdaki e-postadan bize ulaşın.</p>
-    <h2>8. Çocukların Gizliliği</h2>
-    <p>Uygulama 13 yaş altını hedeflemez ve bilerek onlardan veri toplamaz.</p>
-    <h2>9. Değişiklikler</h2>
-    <p>Bu politika zaman zaman güncellenebilir; önemli değişiklikler bu sayfada yayınlanır.</p>
-    <h2>10. İletişim</h2>
-    <p>Sorular ve veri silme talepleri için: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
+    <h1>Tekâmül — Gizlilik Politikası</h1>
+    <p class="updated">Son güncelleme: 4 Ağustos 2026</p>
+    <p class="lead">Tekâmül'ü hesap açmadan kullanabilirsiniz. İlerlemeniz öncelikle telefonunuzda saklanır. Buluta yalnızca siz bağlanmayı seçerseniz veri gider. Ses kaydınız hiçbir yere gönderilmez.</p>
+
+    <h2>1. Konum</h2>
+    <p>Namaz vakitlerini, kıble yönünü ve yakındaki camileri gösterebilmek için yaklaşık konumunuzu (<code>ACCESS_COARSE_LOCATION</code>) isteriz. Koordinatlar vakit hesabı için Aladhan ve Diyanet kaynaklı servislere gönderilir; il/ilçe adını çözmek için cihazın coğrafi kodlayıcısı kullanılır. Konum geçmişi tutulmaz; yalnızca son bilinen konum, vakitler çevrimdışı çalışsın diye telefonunuzda saklanır. İzni vermezseniz şehri elle yazabilirsiniz.</p>
+
+    <h2>2. Mikrofon</h2>
+    <p>Zikir bölümündeki frekans ve nefes analizi için mikrofon kullanılır (<code>RECORD_AUDIO</code>). Ses yalnızca cihaz üzerinde, anlık olarak işlenir; kaydedilmez, diske yazılmaz ve hiçbir sunucuya gönderilmez.</p>
+
+    <h2>3. Yapay Zekâ Rehberi</h2>
+    <p>Rehberlik, günlük ödev, günlük yorumu ve haftalık özet metinleri Google Gemini ile üretilir. Gönderilen şey sayısal özettir: mertebe, odak süresi, zikir sayısı, seri ve seçtiğiniz ilgi alanı. Ruh Aynası'na yazdığınız günlük metni, yorumlanabilmesi için gönderilir — oraya paylaşmak istemediğiniz bilgileri yazmayın. Bu işleme Google'ın gizlilik politikasına tabidir.</p>
+
+    <h2>4. Hesap ve bulut senkronizasyonu</h2>
+    <p>İsteğe bağlıdır. Google ile, e-posta ve şifreyle ya da anonim olarak bağlanabilirsiniz (Firebase Authentication). Bulutta saklananlar: kullanıcı kimliği, varsa e-posta ve görünen ad, mahlas, mertebe, toplam zikir sayısı, seri ve premium durumu. Şifreniz Firebase tarafından yönetilir; uygulama şifrenizi görmez ve saklamaz.</p>
+
+    <h2>5. Liderlik tablosu — herkese açıktır</h2>
+    <p>Liderlik tablosunu açık tutarsanız mahlasınız, mertebeniz, seriniz ve puanınız uygulamanın diğer kullanıcılarına görünür. E-postanız ve gerçek adınız burada görünmez. Ayarlardan kapatabilirsiniz; kapattığınızda kaydınız tablodan silinir. Mahlaslar benzersizdir ve seçildiğinde ayrılmış olarak saklanır.</p>
+
+    <h2>6. Bildirimler ve arka planda çalışma</h2>
+    <p>Vakit, kerahat ve hatim hatırlatmaları için bildirim izni istenir. Kalıcı vakit çubuğunu açarsanız, kalan dakikanın her dakika doğru kalması için bir ön plan servisi çalışır; bu servis yalnızca vakitleri gösterir, veri toplamaz ve istediğiniz zaman kapatılabilir. Kendi bildirim sesinizi seçerseniz yalnızca seçtiğiniz dosyanın adresi saklanır.</p>
+
+    <h2>7. Reklamlar ve satın almalar</h2>
+    <p>Ücretsiz sürümde Google AdMob reklamları gösterilir; AdMob reklam kimliği ve cihaz sinyalleri toplayabilir. Kur'an okuma ekranlarında reklam gösterilmez. Premium'da reklam yoktur. Satın almalar Google Play Billing üzerinden yapılır; uygulama kart veya ödeme bilgilerinizi hiçbir zaman görmez.</p>
+
+    <h2>8. Analitik ve çökme raporları</h2>
+    <p>Uygulamanın hangi bölümlerinin kullanıldığını anlamak için Firebase Analytics, hataları düzeltebilmek için Firebase Crashlytics kullanılır. Bu raporlar cihaz modeli, işletim sistemi sürümü ve hata yığını gibi teknik bilgiler içerir; yazdığınız metinleri veya ses verisini içermez.</p>
+
+    <h2>9. Bağlandığımız servisler</h2>
+    <p>Google Firebase (kimlik, veritabanı, analitik, çökme raporu), Google Gemini (yapay zekâ), Google AdMob (reklam), Google Play Billing (satın alma), Aladhan ve Diyanet kaynaklı namaz vakti servisleri, islamic.network (hikmet sözleri) ve Kur'an ses kayıtları için bir dağıtım ağı. Her biri kendi gizlilik politikasına tabidir. Ayrıntı: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>.</p>
+
+    <h2>10. Verilerinizi silme, çocuklar, iletişim</h2>
+    <p>Ayarlardaki “Tüm verileri sıfırla” yerel verinizi siler ve bulut oturumunuzu kapatır. Bulut kaydınızın tamamen silinmesini isterseniz aşağıdaki adresten yazın. Uygulama 13 yaş altını hedeflemez ve bilerek onlardan veri toplamaz. Politika değişirse bu sayfada yayımlanır.</p>
+    <p>Sorular ve silme talepleri: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
   </div>
 
   <!-- ================= ENGLISH ================= -->
   <div class="lang-content" data-lang="en" dir="ltr">
-    <h1>Tekamül - Privacy Policy</h1>
-    <p class="updated">Last updated: 16 July 2026</p>
-    <p>This Privacy Policy explains how the "Tekamül" mobile application (the "App") handles user data.</p>
-    <h2>1. Microphone Data</h2>
-    <p>The App uses your microphone for frequency/breath analysis in the Dhikr module (<code>RECORD_AUDIO</code> permission). This audio is analyzed only on-device in real time, is never sent to any server or written to disk, and is discarded from memory after analysis.</p>
-    <h2>2. Artificial Intelligence (AI Guide)</h2>
-    <p>The "AI Guide" feature sends only numeric summary statistics to the Google Gemini API (level, focus time, dhikr count, last frequency, streak). No raw audio or directly identifying information is sent. This processing is subject to Google's privacy policy.</p>
-    <h2>3. Account &amp; Cloud Data (Firebase)</h2>
-    <p>Google Firebase (Authentication and Firestore) is used for optional accounts and cloud sync. You may sign in anonymously or with Google. Only the following are stored in the cloud: uid, email and display name (if provided), nickname, level, total dhikr count, and streak. Each user can access only their own record.</p>
-    <h2>4. Ads (Google AdMob)</h2>
-    <p>The free version includes Google AdMob ads; AdMob may collect the advertising ID and device signals. Premium users see no ads. Details: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
-    <h2>5. Purchases (Google Play Billing)</h2>
-    <p>Premium purchases are handled via Google Play Billing. The App never sees or stores your card/payment details; payment is managed entirely by Google Play.</p>
-    <h2>6. Local Storage</h2>
-    <p>Your progress, dhikr/focus history, and decisions are stored on your device in a local database (Room/SQLite).</p>
-    <h2>7. Deleting Your Data</h2>
-    <p>You can delete local data via "Reset All Data" in the app or by uninstalling it. To delete your cloud data, contact us at the email below.</p>
-    <h2>8. Children's Privacy</h2>
-    <p>The App does not target children under 13 and does not knowingly collect data from them.</p>
-    <h2>9. Changes</h2>
-    <p>This policy may be updated from time to time; significant changes will be posted on this page.</p>
-    <h2>10. Contact</h2>
-    <p>For questions and data-deletion requests: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
+    <h1>Tekâmül — Privacy Policy</h1>
+    <p class="updated">Last updated: 4 August 2026</p>
+    <p class="lead">You can use Tekâmül without an account. Your progress is stored on your phone first. Data leaves the device only if you choose to connect to the cloud. Your audio is never sent anywhere.</p>
+
+    <h2>1. Location</h2>
+    <p>We ask for your approximate location (<code>ACCESS_COARSE_LOCATION</code>) to show prayer times, the qibla direction and nearby mosques. Coordinates are sent to Aladhan and Diyanet-sourced prayer-time services; the device's geocoder resolves the city and district name. No location history is kept — only your last known position is stored on the phone so times work offline. If you decline, you can type your city manually.</p>
+
+    <h2>2. Microphone</h2>
+    <p>The microphone is used for frequency and breath analysis in the dhikr section (<code>RECORD_AUDIO</code>). Audio is processed on the device in real time only; it is never recorded, written to disk, or sent to any server.</p>
+
+    <h2>3. AI Guide</h2>
+    <p>Guidance, daily tasks, journal reflections and weekly summaries are generated with Google Gemini. What is sent is a numeric summary: your station, focus time, dhikr count, streak and chosen interest. Text you write in the Soul Mirror journal is sent so it can be reflected upon — do not write anything there you would not want shared. This processing is subject to Google's privacy policy.</p>
+
+    <h2>4. Account and cloud sync</h2>
+    <p>Optional. You can connect with Google, with an email and password, or anonymously (Firebase Authentication). Stored in the cloud: your user id, email and display name if any, nickname, station, total dhikr count, streak and premium status. Your password is handled by Firebase; the app never sees or stores it.</p>
+
+    <h2>5. The leaderboard is public</h2>
+    <p>If you keep the leaderboard on, your nickname, station, streak and score are visible to other users of the app. Your email and real name are not shown. You can turn it off in Settings, which deletes your entry. Nicknames are unique and are reserved once chosen.</p>
+
+    <h2>6. Notifications and background work</h2>
+    <p>Notification permission is requested for prayer, karaha and hatim reminders. If you enable the persistent prayer bar, a foreground service runs so the remaining minutes stay correct every minute; it only displays times, collects nothing, and can be turned off at any time. If you pick your own notification sound, only the address of that file is stored.</p>
+
+    <h2>7. Ads and purchases</h2>
+    <p>The free version shows Google AdMob ads; AdMob may collect an advertising ID and device signals. No ads are shown on the Qur'an reading screens. Premium has no ads. Purchases go through Google Play Billing; the app never sees your card or payment details.</p>
+
+    <h2>8. Analytics and crash reports</h2>
+    <p>Firebase Analytics helps us understand which parts of the app are used, and Firebase Crashlytics helps us fix errors. These reports contain technical details such as device model, OS version and a stack trace; they do not contain text you have written or any audio.</p>
+
+    <h2>9. Services we connect to</h2>
+    <p>Google Firebase (authentication, database, analytics, crash reporting), Google Gemini (AI), Google AdMob (ads), Google Play Billing (purchases), Aladhan and Diyanet-sourced prayer-time services, islamic.network (wisdom quotes) and a delivery network for Qur'an audio. Each is subject to its own privacy policy. See also the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+
+    <h2>10. Deleting your data, children, contact</h2>
+    <p>“Reset all data” in Settings erases your local data and signs you out of the cloud. To have your cloud record deleted entirely, write to the address below. The app does not target children under 13 and does not knowingly collect data from them. Changes to this policy are published on this page.</p>
+    <p>Questions and deletion requests: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
   </div>
 
   <!-- ================= ARABIC ================= -->
   <div class="lang-content" data-lang="ar" dir="rtl">
-    <h1>تكامُل - سياسة الخصوصية</h1>
-    <p class="updated">آخر تحديث: 16 يوليو 2026</p>
-    <p>توضّح سياسة الخصوصية هذه كيفية تعامل تطبيق "تكامُل" ("التطبيق") مع بيانات المستخدم.</p>
-    <h2>1. بيانات الميكروفون</h2>
-    <p>يستخدم التطبيق الميكروفون لتحليل التردد/التنفّس في وحدة الذكر (إذن <code>RECORD_AUDIO</code>). يُحلَّل الصوت على الجهاز فقط وفي الوقت الحقيقي، ولا يُرسَل إلى أي خادم ولا يُحفَظ على القرص، ويُحذَف من الذاكرة بعد التحليل.</p>
-    <h2>2. الذكاء الاصطناعي (المرشد الذكي)</h2>
-    <p>ترسل ميزة "المرشد الذكي" إحصاءات رقمية موجزة فقط إلى Google Gemini API (المستوى، مدة التركيز، عدد الأذكار، آخر تردد، سلسلة الأيام). لا يُرسَل أي صوت خام أو معلومات تعرّف بك مباشرةً. تخضع هذه المعالجة لسياسة خصوصية Google.</p>
-    <h2>3. بيانات الحساب والسحابة (Firebase)</h2>
-    <p>يُستخدم Google Firebase (المصادقة وFirestore) للحسابات الاختيارية والمزامنة السحابية. يمكنك تسجيل الدخول بشكل مجهول أو عبر Google. يُخزَّن في السحابة فقط: المعرّف uid، والبريد والاسم المعروض (إن وُجدا)، والاسم المستعار، والمستوى، وإجمالي عدد الأذكار، وسلسلة الأيام. يصل كل مستخدم إلى سجلّه فقط.</p>
-    <h2>4. الإعلانات (Google AdMob)</h2>
-    <p>يتضمّن الإصدار المجاني إعلانات Google AdMob؛ وقد يجمع AdMob معرّف الإعلان وإشارات الجهاز. لا يرى مستخدمو النسخة المميّزة أي إعلانات. التفاصيل: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Google</a>.</p>
-    <h2>5. المشتريات (Google Play Billing)</h2>
-    <p>تتم مشتريات النسخة المميّزة عبر Google Play Billing. لا يرى التطبيق بيانات بطاقتك/دفعك ولا يخزّنها أبداً؛ وتُدار المدفوعات بالكامل من Google Play.</p>
-    <h2>6. التخزين المحلي</h2>
-    <p>يُحفَظ تقدّمك وسجلّ الذكر/التركيز وقراراتك على جهازك في قاعدة بيانات محلية (Room/SQLite).</p>
-    <h2>7. حذف بياناتك</h2>
-    <p>يمكنك حذف البيانات المحلية عبر "إعادة تعيين كل البيانات" داخل التطبيق أو بإلغاء تثبيته. لحذف بياناتك السحابية، تواصل معنا على البريد أدناه.</p>
-    <h2>8. خصوصية الأطفال</h2>
-    <p>لا يستهدف التطبيق الأطفال دون 13 عاماً ولا يجمع بياناتهم عن قصد.</p>
-    <h2>9. التغييرات</h2>
-    <p>قد تُحدَّث هذه السياسة من حين لآخر؛ وتُنشَر التغييرات المهمّة على هذه الصفحة.</p>
-    <h2>10. التواصل</h2>
-    <p>للأسئلة وطلبات حذف البيانات: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
+    <h1>تكامُل — سياسة الخصوصية</h1>
+    <p class="updated">آخر تحديث: 4 أغسطس 2026</p>
+    <p class="lead">يمكنك استخدام تكامُل دون حساب. يُحفظ تقدّمك على هاتفك أولًا، ولا تغادر البيانات جهازك إلا إذا اخترت الاتصال بالسحابة. ولا يُرسل صوتك إلى أي مكان.</p>
+
+    <h2>1. الموقع</h2>
+    <p>نطلب موقعك التقريبي (<code>ACCESS_COARSE_LOCATION</code>) لعرض مواقيت الصلاة واتجاه القبلة والمساجد القريبة. تُرسل الإحداثيات إلى خدمات المواقيت المستندة إلى Aladhan والديانة، ويُستخدم محدّد المواقع في الجهاز لمعرفة اسم المدينة والحي. لا نحتفظ بسجلّ للمواقع؛ يُحفظ آخر موقع معروف على الهاتف فقط كي تعمل المواقيت دون إنترنت. وإن رفضت الإذن يمكنك كتابة مدينتك يدويًا.</p>
+
+    <h2>2. الميكروفون</h2>
+    <p>يُستخدم الميكروفون لتحليل التردد والنَّفَس في قسم الذكر (<code>RECORD_AUDIO</code>). تُعالَج الأصوات على الجهاز آنيًا فقط؛ لا تُسجَّل ولا تُكتب على القرص ولا تُرسل إلى أي خادم.</p>
+
+    <h2>3. المرشد بالذكاء الاصطناعي</h2>
+    <p>تُولَّد نصوص الإرشاد والمهمة اليومية وتأمّلات المذكرة والملخّص الأسبوعي عبر Google Gemini. ما يُرسل هو ملخّص رقمي: المقام ومدة التركيز وعدد الأذكار والمداومة ومجال اهتمامك. أما ما تكتبه في مرآة الروح فيُرسل ليُتأمَّل فيه — فلا تكتب هناك ما لا ترغب في مشاركته. وتخضع هذه المعالجة لسياسة خصوصية Google.</p>
+
+    <h2>4. الحساب والمزامنة السحابية</h2>
+    <p>اختيارية. يمكنك الاتصال بحساب Google أو ببريد إلكتروني وكلمة مرور أو بشكل مجهول (Firebase Authentication). يُحفظ في السحابة: المعرّف، والبريد والاسم الظاهر إن وُجدا، والاسم المستعار، والمقام، ومجموع الأذكار، والمداومة، وحالة الاشتراك. وتتولى Firebase إدارة كلمة المرور؛ فالتطبيق لا يراها ولا يحفظها.</p>
+
+    <h2>5. لوحة الصدارة علنية</h2>
+    <p>إذا أبقيت لوحة الصدارة مفعّلة، يظهر اسمك المستعار ومقامك ومداومتك ونقاطك لبقية المستخدمين. ولا يظهر بريدك ولا اسمك الحقيقي. ويمكنك إيقافها من الإعدادات فيُحذف سجلّك. والأسماء المستعارة فريدة، ويُحجز الاسم فور اختياره.</p>
+
+    <h2>6. الإشعارات والعمل في الخلفية</h2>
+    <p>يُطلب إذن الإشعارات لتذكيرات الصلاة والكراهة والختمة. وإذا فعّلت شريط المواقيت الدائم، تعمل خدمة في المقدّمة كي تبقى الدقائق المتبقية صحيحة كل دقيقة؛ وهي تعرض المواقيت فقط ولا تجمع شيئًا ويمكن إيقافها متى شئت. وإذا اخترت نغمة إشعار خاصة بك، يُحفظ عنوان الملف فقط.</p>
+
+    <h2>7. الإعلانات والمشتريات</h2>
+    <p>تعرض النسخة المجانية إعلانات Google AdMob، وقد تجمع AdMob معرّف الإعلانات وإشارات الجهاز. ولا تُعرض إعلانات في شاشات قراءة القرآن. ولا إعلانات في النسخة المميزة. وتتم المشتريات عبر Google Play Billing؛ ولا يرى التطبيق بيانات بطاقتك أو دفعك أبدًا.</p>
+
+    <h2>8. التحليلات وتقارير الأعطال</h2>
+    <p>نستخدم Firebase Analytics لمعرفة الأقسام المستخدمة، وFirebase Crashlytics لإصلاح الأخطاء. وتتضمن هذه التقارير تفاصيل تقنية كطراز الجهاز وإصدار النظام وأثر الخطأ؛ ولا تتضمن ما كتبته ولا أي صوت.</p>
+
+    <h2>9. الخدمات التي نتصل بها</h2>
+    <p>Google Firebase (الهوية وقاعدة البيانات والتحليلات وتقارير الأعطال)، وGoogle Gemini (الذكاء الاصطناعي)، وGoogle AdMob (الإعلانات)، وGoogle Play Billing (المشتريات)، وخدمات المواقيت المستندة إلى Aladhan والديانة، وislamic.network (أقوال الحكمة)، وشبكة توزيع لتلاوات القرآن. ولكلٍّ منها سياسة خصوصية خاصة. انظر أيضًا <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Google</a>.</p>
+
+    <h2>10. حذف بياناتك والأطفال والتواصل</h2>
+    <p>خيار «إعادة تعيين جميع البيانات» في الإعدادات يمسح بياناتك المحلية ويخرجك من السحابة. ولحذف سجلّك السحابي بالكامل راسلنا على العنوان أدناه. والتطبيق لا يستهدف من هم دون 13 عامًا ولا يجمع بياناتهم عن قصد. وتُنشر أي تغييرات على هذه الصفحة.</p>
+    <p>للأسئلة وطلبات الحذف: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
   </div>
 
   <!-- ================= INDONESIAN ================= -->
   <div class="lang-content" data-lang="id" dir="ltr">
-    <h1>Tekamül - Kebijakan Privasi</h1>
-    <p class="updated">Terakhir diperbarui: 16 Juli 2026</p>
-    <p>Kebijakan Privasi ini menjelaskan cara aplikasi seluler "Tekamül" ("Aplikasi") menangani data pengguna.</p>
-    <h2>1. Data Mikrofon</h2>
-    <p>Aplikasi menggunakan mikrofon untuk analisis frekuensi/napas pada modul Dzikir (izin <code>RECORD_AUDIO</code>). Audio hanya dianalisis di perangkat secara real-time, tidak pernah dikirim ke server atau ditulis ke disk, dan dihapus dari memori setelah analisis.</p>
-    <h2>2. Kecerdasan Buatan (Pemandu AI)</h2>
-    <p>Fitur "Pemandu AI" hanya mengirim statistik ringkas berupa angka ke Google Gemini API (level, durasi fokus, jumlah dzikir, frekuensi terakhir, streak). Tidak ada audio mentah atau informasi yang mengidentifikasi Anda secara langsung yang dikirim. Pemrosesan ini tunduk pada kebijakan privasi Google.</p>
-    <h2>3. Data Akun &amp; Cloud (Firebase)</h2>
-    <p>Google Firebase (Authentication dan Firestore) digunakan untuk akun opsional dan sinkronisasi cloud. Anda dapat masuk secara anonim atau dengan Google. Hanya berikut yang disimpan di cloud: uid, email dan nama tampilan (jika ada), nama panggilan, level, total jumlah dzikir, dan streak. Setiap pengguna hanya dapat mengakses catatannya sendiri.</p>
-    <h2>4. Iklan (Google AdMob)</h2>
-    <p>Versi gratis menampilkan iklan Google AdMob; AdMob dapat mengumpulkan ID iklan dan sinyal perangkat. Pengguna premium tidak melihat iklan. Detail: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Kebijakan Privasi Google</a>.</p>
-    <h2>5. Pembelian (Google Play Billing)</h2>
-    <p>Pembelian premium ditangani melalui Google Play Billing. Aplikasi tidak pernah melihat atau menyimpan detail kartu/pembayaran Anda; pembayaran sepenuhnya dikelola oleh Google Play.</p>
-    <h2>6. Penyimpanan Lokal</h2>
-    <p>Kemajuan, riwayat dzikir/fokus, dan keputusan Anda disimpan di perangkat dalam basis data lokal (Room/SQLite).</p>
-    <h2>7. Menghapus Data Anda</h2>
-    <p>Anda dapat menghapus data lokal melalui "Reset Semua Data" di aplikasi atau dengan menghapus instalasinya. Untuk menghapus data cloud, hubungi kami di email di bawah.</p>
-    <h2>8. Privasi Anak</h2>
-    <p>Aplikasi tidak menargetkan anak di bawah 13 tahun dan tidak dengan sengaja mengumpulkan data mereka.</p>
-    <h2>9. Perubahan</h2>
-    <p>Kebijakan ini dapat diperbarui dari waktu ke waktu; perubahan penting akan diposting di halaman ini.</p>
-    <h2>10. Kontak</h2>
-    <p>Untuk pertanyaan dan permintaan penghapusan data: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
+    <h1>Tekâmül — Kebijakan Privasi</h1>
+    <p class="updated">Pembaruan terakhir: 4 Agustus 2026</p>
+    <p class="lead">Kamu bisa memakai Tekâmül tanpa akun. Kemajuanmu disimpan di ponsel lebih dulu. Data hanya keluar dari perangkat jika kamu memilih terhubung ke awan. Suaramu tidak pernah dikirim ke mana pun.</p>
+
+    <h2>1. Lokasi</h2>
+    <p>Kami meminta lokasi perkiraanmu (<code>ACCESS_COARSE_LOCATION</code>) untuk menampilkan jadwal salat, arah kiblat, dan masjid terdekat. Koordinat dikirim ke layanan jadwal salat berbasis Aladhan dan Diyanet; geocoder perangkat menerjemahkan nama kota dan kecamatan. Riwayat lokasi tidak disimpan — hanya posisi terakhir yang disimpan di ponsel agar jadwal tetap jalan tanpa internet. Jika kamu menolak, kota bisa diketik manual.</p>
+
+    <h2>2. Mikrofon</h2>
+    <p>Mikrofon dipakai untuk analisis frekuensi dan napas di bagian zikir (<code>RECORD_AUDIO</code>). Suara diproses di perangkat secara langsung saja; tidak direkam, tidak ditulis ke penyimpanan, dan tidak dikirim ke server mana pun.</p>
+
+    <h2>3. Pemandu Kecerdasan Buatan</h2>
+    <p>Teks bimbingan, tugas harian, refleksi jurnal, dan ringkasan mingguan dibuat dengan Google Gemini. Yang dikirim adalah ringkasan angka: tingkat, durasi fokus, jumlah zikir, seri, dan minat pilihanmu. Tulisan di Cermin Jiwa dikirim agar bisa direfleksikan — jangan menulis hal yang tidak ingin kamu bagikan. Pemrosesan ini tunduk pada kebijakan privasi Google.</p>
+
+    <h2>4. Akun dan sinkronisasi awan</h2>
+    <p>Bersifat opsional. Kamu bisa terhubung lewat Google, lewat email dan kata sandi, atau secara anonim (Firebase Authentication). Yang disimpan di awan: id pengguna, email dan nama tampilan bila ada, nama panggilan, tingkat, total zikir, seri, dan status premium. Kata sandimu dikelola Firebase; aplikasi tidak pernah melihat atau menyimpannya.</p>
+
+    <h2>5. Papan peringkat bersifat publik</h2>
+    <p>Jika papan peringkat kamu biarkan aktif, nama panggilan, tingkat, seri, dan skormu terlihat oleh pengguna lain. Email dan nama aslimu tidak ditampilkan. Kamu bisa mematikannya di Pengaturan, dan entrimu akan dihapus. Nama panggilan bersifat unik dan langsung dipesan saat dipilih.</p>
+
+    <h2>6. Notifikasi dan kerja latar</h2>
+    <p>Izin notifikasi diminta untuk pengingat salat, karahah, dan khatam. Jika kamu menyalakan bilah waktu salat permanen, sebuah layanan latar depan berjalan agar sisa menit tetap tepat setiap menit; layanan itu hanya menampilkan waktu, tidak mengumpulkan apa pun, dan bisa dimatikan kapan saja. Jika kamu memilih nada notifikasi sendiri, hanya alamat berkas itu yang disimpan.</p>
+
+    <h2>7. Iklan dan pembelian</h2>
+    <p>Versi gratis menampilkan iklan Google AdMob; AdMob dapat mengumpulkan ID iklan dan sinyal perangkat. Tidak ada iklan di layar baca Al-Qur'an. Versi premium tanpa iklan. Pembelian melalui Google Play Billing; aplikasi tidak pernah melihat data kartu atau pembayaranmu.</p>
+
+    <h2>8. Analitik dan laporan kerusakan</h2>
+    <p>Firebase Analytics membantu kami memahami bagian mana yang dipakai, dan Firebase Crashlytics membantu memperbaiki kesalahan. Laporan ini berisi detail teknis seperti model perangkat, versi sistem, dan jejak galat; tidak berisi tulisanmu maupun suara.</p>
+
+    <h2>9. Layanan yang kami hubungi</h2>
+    <p>Google Firebase (identitas, basis data, analitik, laporan kerusakan), Google Gemini (AI), Google AdMob (iklan), Google Play Billing (pembelian), layanan jadwal salat berbasis Aladhan dan Diyanet, islamic.network (kutipan hikmah), dan jaringan pengiriman untuk audio Al-Qur'an. Masing-masing tunduk pada kebijakan privasinya sendiri. Lihat juga <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Kebijakan Privasi Google</a>.</p>
+
+    <h2>10. Menghapus data, anak-anak, kontak</h2>
+    <p>“Reset semua data” di Pengaturan menghapus data lokalmu dan mengeluarkanmu dari awan. Untuk menghapus catatan awan sepenuhnya, tulis ke alamat di bawah. Aplikasi tidak menyasar anak di bawah 13 tahun dan tidak sengaja mengumpulkan data mereka. Perubahan kebijakan diumumkan di halaman ini.</p>
+    <p>Pertanyaan dan permintaan penghapusan: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
   </div>
 
   <!-- ================= URDU ================= -->
   <div class="lang-content" data-lang="ur" dir="rtl">
-    <h1>تکامُل - رازداری کی پالیسی</h1>
-    <p class="updated">آخری تازہ کاری: 16 جولائی 2026</p>
-    <p>یہ رازداری پالیسی بتاتی ہے کہ موبائل ایپلیکیشن "تکامُل" ("ایپ") صارف کے ڈیٹا کو کیسے سنبھالتی ہے۔</p>
-    <h2>1. مائیکروفون ڈیٹا</h2>
-    <p>ایپ ذکر ماڈیول میں فریکوئنسی/سانس کے تجزیے کے لیے آپ کا مائیکروفون استعمال کرتی ہے (<code>RECORD_AUDIO</code> اجازت)۔ یہ آڈیو صرف ڈیوائس پر حقیقی وقت میں تجزیہ کیا جاتا ہے، کسی سرور کو نہیں بھیجا جاتا اور نہ ڈسک پر محفوظ ہوتا ہے، اور تجزیے کے بعد میموری سے حذف ہو جاتا ہے۔</p>
-    <h2>2. مصنوعی ذہانت (اے آئی رہنما)</h2>
-    <p>"اے آئی رہنما" فیچر صرف عددی خلاصہ اعداد و شمار Google Gemini API کو بھیجتا ہے (لیول، فوکس دورانیہ، ذکر کی تعداد، آخری فریکوئنسی، اسٹریک)۔ کوئی خام آڈیو یا آپ کی براہِ راست شناخت کرنے والی معلومات نہیں بھیجی جاتی۔ یہ پروسیسنگ Google کی رازداری پالیسی کے تابع ہے۔</p>
-    <h2>3. اکاؤنٹ اور کلاؤڈ ڈیٹا (Firebase)</h2>
-    <p>اختیاری اکاؤنٹس اور کلاؤڈ سنک کے لیے Google Firebase (Authentication اور Firestore) استعمال ہوتا ہے۔ آپ گمنام یا Google کے ذریعے سائن اِن کر سکتے ہیں۔ کلاؤڈ میں صرف یہ محفوظ ہوتا ہے: uid، ای میل اور ڈسپلے نام (اگر ہو)، عرفیت، لیول، کل ذکر کی تعداد، اور اسٹریک۔ ہر صارف صرف اپنے ریکارڈ تک رسائی رکھتا ہے۔</p>
-    <h2>4. اشتہارات (Google AdMob)</h2>
-    <p>مفت ورژن میں Google AdMob اشتہارات شامل ہیں؛ AdMob ایڈورٹائزنگ آئی ڈی اور ڈیوائس سگنلز جمع کر سکتا ہے۔ پریمیم صارفین کو کوئی اشتہار نظر نہیں آتا۔ تفصیل: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google رازداری پالیسی</a>۔</p>
-    <h2>5. خریداری (Google Play Billing)</h2>
-    <p>پریمیم خریداری Google Play Billing کے ذریعے ہوتی ہے۔ ایپ آپ کے کارڈ/ادائیگی کی تفصیلات کبھی نہیں دیکھتی یا محفوظ نہیں کرتی؛ ادائیگی مکمل طور پر Google Play سنبھالتا ہے۔</p>
-    <h2>6. مقامی اسٹوریج</h2>
-    <p>آپ کی پیش رفت، ذکر/فوکس کی تاریخ، اور فیصلے آپ کے ڈیوائس پر ایک مقامی ڈیٹابیس (Room/SQLite) میں محفوظ ہوتے ہیں۔</p>
-    <h2>7. اپنا ڈیٹا حذف کرنا</h2>
-    <p>آپ ایپ میں "تمام ڈیٹا ری سیٹ" کے ذریعے یا اسے اَن اِنسٹال کرکے مقامی ڈیٹا حذف کر سکتے ہیں۔ کلاؤڈ ڈیٹا حذف کرنے کے لیے نیچے دیے گئے ای میل پر رابطہ کریں۔</p>
-    <h2>8. بچوں کی رازداری</h2>
-    <p>ایپ 13 سال سے کم عمر بچوں کو ہدف نہیں بناتی اور جان بوجھ کر ان سے ڈیٹا جمع نہیں کرتی۔</p>
-    <h2>9. تبدیلیاں</h2>
-    <p>یہ پالیسی وقتاً فوقتاً اپ ڈیٹ ہو سکتی ہے؛ اہم تبدیلیاں اسی صفحے پر شائع کی جائیں گی۔</p>
-    <h2>10. رابطہ</h2>
-    <p>سوالات اور ڈیٹا حذف کرنے کی درخواستوں کے لیے: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
+    <h1>تکامل — پرائیویسی پالیسی</h1>
+    <p class="updated">آخری تازہ کاری: 4 اگست 2026</p>
+    <p class="lead">آپ تکامل کو بغیر اکاؤنٹ کے استعمال کر سکتے ہیں۔ آپ کی پیش رفت پہلے آپ کے فون میں محفوظ ہوتی ہے۔ ڈیٹا صرف اسی صورت ڈیوائس سے باہر جاتا ہے جب آپ خود کلاؤڈ سے جڑنے کا انتخاب کریں۔ آپ کی آواز کہیں نہیں بھیجی جاتی۔</p>
+
+    <h2>1. مقامِ محلِ وقوع</h2>
+    <p>نماز کے اوقات، سمتِ قبلہ اور قریبی مساجد دکھانے کے لیے ہم آپ کا تخمینی مقام (<code>ACCESS_COARSE_LOCATION</code>) طلب کرتے ہیں۔ کوآرڈینیٹس Aladhan اور دیانت پر مبنی اوقاتِ نماز کی خدمات کو بھیجے جاتے ہیں؛ شہر اور ضلع کا نام ڈیوائس کا جیوکوڈر معلوم کرتا ہے۔ مقام کی تاریخ محفوظ نہیں کی جاتی — صرف آخری معلوم مقام فون پر رکھا جاتا ہے تاکہ اوقات آف لائن بھی چلیں۔ اجازت نہ دینے کی صورت میں آپ شہر خود لکھ سکتے ہیں۔</p>
+
+    <h2>2. مائیکروفون</h2>
+    <p>ذکر کے حصے میں فریکوئنسی اور سانس کے تجزیے کے لیے مائیکروفون استعمال ہوتا ہے (<code>RECORD_AUDIO</code>)۔ آواز صرف ڈیوائس پر فوری طور پر پروسیس ہوتی ہے؛ نہ ریکارڈ ہوتی ہے، نہ محفوظ کی جاتی ہے، اور نہ کسی سرور کو بھیجی جاتی ہے۔</p>
+
+    <h2>3. مصنوعی ذہانت کا رہنما</h2>
+    <p>رہنمائی، روزانہ وظیفہ، ڈائری کا تجزیہ اور ہفتہ وار خلاصہ Google Gemini سے تیار ہوتے ہیں۔ جو بھیجا جاتا ہے وہ عددی خلاصہ ہے: درجہ، دورانِ توجہ، ذکر کی تعداد، تسلسل اور آپ کی منتخب دلچسپی۔ آئینۂ روح میں لکھی گئی تحریر تجزیے کے لیے بھیجی جاتی ہے — وہاں ایسی بات نہ لکھیں جو آپ بانٹنا نہیں چاہتے۔ یہ عمل Google کی پرائیویسی پالیسی کے تابع ہے۔</p>
+
+    <h2>4. اکاؤنٹ اور کلاؤڈ ہم آہنگی</h2>
+    <p>اختیاری ہے۔ آپ Google سے، ای میل اور پاس ورڈ سے، یا گمنام طور پر جڑ سکتے ہیں (Firebase Authentication)۔ کلاؤڈ میں محفوظ ہوتا ہے: صارف شناخت، ای میل اور ظاہری نام اگر ہوں، عرفی نام، درجہ، کل ذکر، تسلسل اور پریمیم حیثیت۔ پاس ورڈ Firebase سنبھالتا ہے؛ ایپ اسے نہ دیکھتی ہے نہ محفوظ کرتی ہے۔</p>
+
+    <h2>5. لیڈر بورڈ عوامی ہے</h2>
+    <p>اگر آپ لیڈر بورڈ فعال رکھیں تو آپ کا عرفی نام، درجہ، تسلسل اور اسکور دوسرے صارفین کو نظر آتے ہیں۔ ای میل اور اصل نام نظر نہیں آتے۔ آپ ترتیبات سے بند کر سکتے ہیں، جس پر آپ کا اندراج حذف ہو جاتا ہے۔ عرفی نام منفرد ہوتے ہیں اور انتخاب کے ساتھ ہی مخصوص ہو جاتے ہیں۔</p>
+
+    <h2>6. اطلاعات اور پس منظر کا کام</h2>
+    <p>نماز، کراہت اور ختم کی یاد دہانیوں کے لیے اطلاعات کی اجازت درکار ہے۔ مستقل اوقات بار فعال کرنے پر ایک فورگراؤنڈ سروس چلتی ہے تاکہ باقی منٹ ہر منٹ درست رہیں؛ یہ صرف اوقات دکھاتی ہے، کچھ جمع نہیں کرتی، اور جب چاہیں بند کی جا سکتی ہے۔ اپنی اطلاعی آواز منتخب کرنے پر صرف اس فائل کا پتہ محفوظ ہوتا ہے۔</p>
+
+    <h2>7. اشتہارات اور خریداری</h2>
+    <p>مفت نسخے میں Google AdMob کے اشتہارات آتے ہیں؛ AdMob اشتہاری شناخت اور ڈیوائس سگنلز جمع کر سکتا ہے۔ قرآن پڑھنے کی اسکرینوں پر اشتہار نہیں آتے۔ پریمیم میں اشتہار نہیں۔ خریداری Google Play Billing کے ذریعے ہوتی ہے؛ ایپ آپ کے کارڈ یا ادائیگی کی تفصیلات کبھی نہیں دیکھتی۔</p>
+
+    <h2>8. تجزیات اور کریش رپورٹس</h2>
+    <p>Firebase Analytics سے ہم جانتے ہیں کہ کون سے حصے استعمال ہوتے ہیں، اور Firebase Crashlytics سے خرابیاں درست کرتے ہیں۔ ان رپورٹس میں ڈیوائس ماڈل، سسٹم ورژن اور ایرر ٹریس جیسی تکنیکی تفصیل ہوتی ہے؛ آپ کی لکھی تحریر یا آواز شامل نہیں ہوتی۔</p>
+
+    <h2>9. جن خدمات سے ہم جڑتے ہیں</h2>
+    <p>Google Firebase (شناخت، ڈیٹابیس، تجزیات، کریش رپورٹ)، Google Gemini (مصنوعی ذہانت)، Google AdMob (اشتہارات)، Google Play Billing (خریداری)، Aladhan اور دیانت پر مبنی اوقاتِ نماز کی خدمات، islamic.network (اقوالِ حکمت)، اور قرآنی تلاوت کے لیے ایک ترسیلی نیٹ ورک۔ ہر ایک کی اپنی پرائیویسی پالیسی ہے۔ مزید: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google پرائیویسی پالیسی</a>۔</p>
+
+    <h2>10. ڈیٹا حذف کرنا، بچے، رابطہ</h2>
+    <p>ترتیبات میں «تمام ڈیٹا ری سیٹ کریں» آپ کا مقامی ڈیٹا مٹاتا ہے اور کلاؤڈ سے لاگ آؤٹ کرتا ہے۔ کلاؤڈ ریکارڈ مکمل حذف کرانے کے لیے نیچے دیے پتے پر لکھیں۔ ایپ 13 سال سے کم عمر کو ہدف نہیں بناتی اور دانستہ ان سے ڈیٹا جمع نہیں کرتی۔ پالیسی میں تبدیلیاں اسی صفحے پر شائع ہوں گی۔</p>
+    <p>سوالات اور حذف کی درخواستیں: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
   </div>
 
   <!-- ================= JAPANESE ================= -->
   <div class="lang-content" data-lang="ja" dir="ltr">
-    <h1>Tekamül - プライバシーポリシー</h1>
-    <p class="updated">最終更新日: 2026年7月16日</p>
-    <p>本プライバシーポリシーは、モバイルアプリ「Tekamül」（以下「本アプリ」）がユーザーデータをどのように取り扱うかを説明します。</p>
-    <h2>1. マイクのデータ</h2>
-    <p>本アプリは、ズィクル（Dhikr）モジュールでの周波数・呼吸の解析にマイクを使用します（<code>RECORD_AUDIO</code> 権限）。音声は端末上でリアルタイムに解析されるのみで、サーバーへ送信されることも、ディスクに保存されることもなく、解析後にメモリから破棄されます。</p>
-    <h2>2. 人工知能（AIガイド）</h2>
-    <p>「AIガイド」機能は、Google Gemini API に数値的な統計要約（レベル、集中時間、ズィクル回数、最終周波数、連続日数）のみを送信します。生の音声や個人を直接特定する情報は送信されません。この処理は Google のプライバシーポリシーに従います。</p>
-    <h2>3. アカウントとクラウドデータ（Firebase）</h2>
-    <p>任意のアカウントおよびクラウド同期のために Google Firebase（Authentication と Firestore）を使用します。匿名または Google でサインインできます。クラウドに保存されるのは、uid、（提供された場合）メールと表示名、ニックネーム、レベル、ズィクル合計回数、連続日数のみです。各ユーザーは自分の記録にのみアクセスできます。</p>
-    <h2>4. 広告（Google AdMob）</h2>
-    <p>無料版には Google AdMob 広告が含まれ、AdMob は広告 ID や端末シグナルを収集する場合があります。プレミアムユーザーには広告は表示されません。詳細: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>。</p>
-    <h2>5. 購入（Google Play Billing）</h2>
-    <p>プレミアムの購入は Google Play Billing を通じて行われます。本アプリがカードや支払い情報を見ることも保存することも一切ありません。支払いはすべて Google Play が管理します。</p>
-    <h2>6. ローカル保存</h2>
-    <p>進捗、ズィクル・集中の履歴、および選択の記録は、端末内のローカルデータベース（Room/SQLite）に保存されます。</p>
-    <h2>7. データの削除</h2>
-    <p>アプリ内の「すべてのデータをリセット」またはアンインストールにより、ローカルデータを削除できます。クラウドデータの削除をご希望の場合は、下記メールまでご連絡ください。</p>
-    <h2>8. 子どものプライバシー</h2>
-    <p>本アプリは13歳未満を対象とせず、意図的に情報を収集することはありません。</p>
-    <h2>9. 変更</h2>
-    <p>本ポリシーは随時更新される場合があります。重要な変更は本ページに掲載します。</p>
-    <h2>10. お問い合わせ</h2>
-    <p>ご質問およびデータ削除のご依頼: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
+    <h1>テカミュル — プライバシーポリシー</h1>
+    <p class="updated">最終更新: 2026年8月4日</p>
+    <p class="lead">テカミュルはアカウントなしで使えます。進捗はまず端末に保存され、クラウド接続を選んだ場合にのみデータが端末外へ出ます。音声はどこにも送信されません。</p>
+
+    <h2>1. 位置情報</h2>
+    <p>礼拝時刻・キブラの方角・近くのモスクを表示するため、おおよその位置情報（<code>ACCESS_COARSE_LOCATION</code>）を求めます。座標は Aladhan およびディヤーネト由来の礼拝時刻サービスへ送られ、市区町村名は端末のジオコーダーで解決します。位置履歴は保持せず、オフラインでも時刻が使えるよう最後の位置のみ端末に保存します。許可しない場合は都市名を手入力できます。</p>
+
+    <h2>2. マイク</h2>
+    <p>ズィクルの周波数・呼吸解析にマイクを使用します（<code>RECORD_AUDIO</code>）。音声は端末上でリアルタイムに処理されるだけで、録音も保存もされず、サーバーへ送信されることもありません。</p>
+
+    <h2>3. AI ガイド</h2>
+    <p>導き・日々の課題・日記の考察・週次まとめは Google Gemini で生成されます。送信されるのは数値の要約（段位、集中時間、ズィクル数、連続日数、選んだ関心分野）です。「魂の鏡」に書いた文章は考察のために送信されるため、共有したくない内容は書かないでください。この処理は Google のプライバシーポリシーに従います。</p>
+
+    <h2>4. アカウントとクラウド同期</h2>
+    <p>任意です。Google、メールとパスワード、または匿名で接続できます（Firebase Authentication）。クラウドに保存されるのは、ユーザー ID、あればメールと表示名、ニックネーム、段位、総ズィクル数、連続日数、プレミアム状態です。パスワードは Firebase が管理し、アプリが見ることも保存することもありません。</p>
+
+    <h2>5. ランキングは公開されます</h2>
+    <p>ランキングを有効にしている場合、ニックネーム・段位・連続日数・スコアが他の利用者に表示されます。メールアドレスと本名は表示されません。設定でオフにでき、その際は登録が削除されます。ニックネームは重複できず、選んだ時点で確保されます。</p>
+
+    <h2>6. 通知とバックグラウンド動作</h2>
+    <p>礼拝・カラーハ・ハトムの通知のために通知権限を求めます。常駐の礼拝バーを有効にすると、残り時間が毎分正しく保たれるようフォアグラウンドサービスが動作します。これは時刻を表示するだけで何も収集せず、いつでも停止できます。通知音を自分で選んだ場合、そのファイルの場所のみを保存します。</p>
+
+    <h2>7. 広告と購入</h2>
+    <p>無料版では Google AdMob の広告が表示され、AdMob は広告 ID と端末シグナルを収集する場合があります。クルアーン読誦画面に広告は出ません。プレミアムでは広告はありません。購入は Google Play Billing 経由で、アプリがカード情報や決済情報を見ることはありません。</p>
+
+    <h2>8. 分析とクラッシュレポート</h2>
+    <p>どの機能が使われているかを把握するために Firebase Analytics を、不具合修正のために Firebase Crashlytics を使用します。これらのレポートには端末モデル・OS バージョン・スタックトレースなどの技術情報が含まれ、入力された文章や音声は含まれません。</p>
+
+    <h2>9. 接続する外部サービス</h2>
+    <p>Google Firebase（認証・データベース・分析・クラッシュレポート）、Google Gemini（AI）、Google AdMob（広告）、Google Play Billing（購入）、Aladhan およびディヤーネト由来の礼拝時刻サービス、islamic.network（箴言）、クルアーン音声の配信ネットワーク。いずれもそれぞれのプライバシーポリシーに従います。<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>もご参照ください。</p>
+
+    <h2>10. データの削除・子ども・連絡先</h2>
+    <p>設定の「すべてのデータをリセット」で端末内のデータを消去し、クラウドからログアウトします。クラウド上の記録を完全に削除したい場合は下記までご連絡ください。本アプリは 13 歳未満を対象とせず、意図的にデータを収集しません。変更はこのページで公開します。</p>
+    <p>ご質問・削除のご依頼: <a href="mailto:netdrne@gmail.com">netdrne@gmail.com</a></p>
   </div>
 
-  <script>
-    function setLang(l) {
-      document.querySelectorAll('.lang-content').forEach(function (d) { d.classList.remove('active'); });
-      var target = document.querySelector('.lang-content[data-lang="' + l + '"]');
-      if (target) target.classList.add('active');
-      document.documentElement.setAttribute('dir', (l === 'ar' || l === 'ur') ? 'rtl' : 'ltr');
-      document.documentElement.setAttribute('lang', l);
-      document.querySelectorAll('.lang-switch button').forEach(function (b) {
-        b.classList.toggle('sel', b.getAttribute('data-b') === l);
-      });
+<script>
+  function setLang(code) {
+    document.querySelectorAll('.lang-content').forEach(function (el) {
+      el.classList.toggle('active', el.dataset.lang === code);
+    });
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('sel', b.dataset.b === code);
+    });
+    var rtl = (code === 'ar' || code === 'ur');
+    document.documentElement.lang = code;
+    document.documentElement.dir = rtl ? 'rtl' : 'ltr';
+    try { history.replaceState(null, '', '#' + code); } catch (e) {}
+  }
+  // Cihaz dilini yakala: kullanıcı kendi dilindeki metni arayarak bulmak zorunda kalmasın.
+  (function () {
+    var want = (location.hash || '').replace('#', '');
+    if (!want) {
+      var nav = (navigator.language || 'en').slice(0, 2).toLowerCase();
+      want = ({ tr: 'tr', ar: 'ar', id: 'id', in: 'id', ur: 'ur', ja: 'ja' })[nav] || 'en';
     }
-  </script>
-
+    if (document.querySelector('.lang-content[data-lang="' + want + '"]')) setLang(want);
+  })();
+</script>
 </body>
 </html>
