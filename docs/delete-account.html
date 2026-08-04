@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tekâmül — Hesap Silme / Account Deletion</title>
+<!--
+  Google Play "Hesap silme URL'si" alanının işaret ettiği sayfa. Üç şartı karşılamak
+  zorundadır: (1) mağaza girişindeki uygulama/geliştirici adına atıf, (2) silme talebinin
+  adımlarını belirgin göstermek, (3) silinen ve saklanan veri türleri + saklama süreleri.
+  Metni değiştirirken bu üçünün korunduğundan emin olun.
+-->
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; max-width: 760px;
+         margin: 0 auto; padding: 20px 20px 60px; line-height: 1.65; color: #1a1a1a; background: #fff; }
+  h1 { font-size: 1.5em; margin-bottom: .1em; }
+  h2 { font-size: 1.08em; margin-top: 1.7em; margin-bottom: .3em; }
+  .app { color: #666; font-size: .95em; margin-top: 0; }
+  .steps { background: #f6f6f4; border-left: 3px solid #b8963e; padding: 4px 18px 12px; border-radius: 6px; }
+  .steps li { margin: .5em 0; }
+  table { border-collapse: collapse; width: 100%; margin-top: .6em; font-size: .95em; }
+  th, td { border: 1px solid #e2e0dc; padding: 8px 10px; text-align: start; vertical-align: top; }
+  th { background: #f6f6f4; font-weight: 600; }
+  a { color: #7a5c12; }
+  .mail { font-size: 1.05em; font-weight: 600; }
+  .lang-switch { position: sticky; top: 0; background: #fff; padding: 12px 0; border-bottom: 1px solid #eee;
+                 display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .lang-switch button { cursor: pointer; border: 1px solid #ccc; background: #fafafa; border-radius: 20px;
+                        padding: 6px 14px; font-size: .9em; }
+  .lang-switch button.sel { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+  .lang-content { display: none; }
+  .lang-content.active { display: block; }
+  [dir="rtl"] { text-align: right; }
+  [dir="rtl"] .steps { border-left: none; border-right: 3px solid #b8963e; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #141317; color: #e8e6ea; }
+    .lang-switch { background: #141317; border-bottom-color: #2a2830; }
+    .lang-switch button { background: #1f1e24; border-color: #3a3742; color: #e8e6ea; }
+    .lang-switch button.sel { background: #e8e6ea; color: #141317; border-color: #e8e6ea; }
+    .steps { background: #1f1e24; }
+    th { background: #1f1e24; } th, td { border-color: #33303a; }
+    .app { color: #9c96a8; }
+    a { color: #e0b654; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="lang-switch">
+    <button data-b="tr" class="sel" onclick="setLang('tr')">Türkçe</button>
+    <button data-b="en" onclick="setLang('en')">English</button>
+    <button data-b="ar" onclick="setLang('ar')">العربية</button>
+    <button data-b="id" onclick="setLang('id')">Indonesia</button>
+    <button data-b="ur" onclick="setLang('ur')">اردو</button>
+    <button data-b="ja" onclick="setLang('ja')">日本語</button>
+  </div>
+
+  <!-- ================= TURKISH ================= -->
+  <div class="lang-content active" data-lang="tr" dir="ltr">
+    <h1>Hesap ve Veri Silme</h1>
+    <p class="app">Uygulama: <strong>Tekâmül</strong> (<code>com.aistudio.tekamul.mystic</code>) — Geliştirici: <strong>netdrne</strong></p>
+
+    <h2>Hesabınızı tamamen silmek için</h2>
+    <div class="steps">
+      <ol>
+        <li><strong>netdrne@gmail.com</strong> adresine, konu satırına <strong>“Hesap silme talebi”</strong> yazarak e-posta gönderin.</li>
+        <li>Hesabınızı bulabilmemiz için şunlardan <em>birini</em> yazın: uygulamada kullandığınız <strong>e-posta adresi</strong> veya <strong>mahlasınız</strong>.</li>
+        <li>Talebi onaylayan bir yanıt göndeririz. Silme işlemi <strong>30 gün içinde</strong> tamamlanır.</li>
+        <li>Telefonunuzdaki verileri hemen silmek isterseniz uygulamayı kaldırın ya da <em>Ayarlar → Tüm verileri sıfırla</em> deyin.</li>
+      </ol>
+    </div>
+
+    <h2>Hesabı silmeden yalnızca bir kısmını silmek için</h2>
+    <ul>
+      <li><strong>Liderlik kaydı:</strong> <em>Ayarlar → Liderlik tablosunda görün</em> anahtarını kapatın. Kaydınız tablodan anında silinir.</li>
+      <li><strong>Cihazdaki veriler:</strong> <em>Ayarlar → Tüm verileri sıfırla</em> — ilerleme, zikir geçmişi, günlük ve okuma kayıtlarını siler.</li>
+      <li><strong>Belirli bir veri:</strong> yukarıdaki adrese hangi veriyi silmek istediğinizi yazın; hesabınız açık kalır.</li>
+    </ul>
+
+    <h2>Neler silinir, neler saklanır</h2>
+    <table>
+      <tr><th>Veri</th><th>Ne olur</th><th>Süre</th></tr>
+      <tr><td>Kimlik kaydı (Firebase Authentication)</td><td>Silinir</td><td>30 gün içinde</td></tr>
+      <tr><td>Profil kaydı: e-posta, görünen ad, mahlas, mertebe, zikir sayısı, seri, premium durumu</td><td>Silinir</td><td>30 gün içinde</td></tr>
+      <tr><td>Liderlik tablosu kaydı</td><td>Silinir</td><td>Anında (anahtardan) veya 30 gün içinde</td></tr>
+      <tr><td>Mahlas rezervasyonu</td><td>Silinir, ad yeniden kullanılabilir olur</td><td>30 gün içinde</td></tr>
+      <tr><td>Telefondaki yerel veriler</td><td>Uygulamayı kaldırınca veya sıfırlayınca silinir</td><td>Anında</td></tr>
+      <tr><td>Yedeklerdeki kopyalar</td><td>Silinir</td><td>En geç 90 gün</td></tr>
+      <tr><td>Çökme raporları (Firebase Crashlytics)</td><td>Kimliğinizle ilişkilendirilemez; otomatik olarak süresi dolar</td><td>90 gün</td></tr>
+      <tr><td>Toplu/anonim kullanım istatistikleri</td><td>Kimliğe bağlanamadığı için saklanır</td><td>—</td></tr>
+      <tr><td>Google Play satın alma kayıtları</td><td>Google'da kalır; yasal ve mali yükümlülük gereği bizim silme yetkimiz yoktur</td><td>Google'ın politikasına tabi</td></tr>
+    </table>
+    <p>Ses kaydı hiçbir zaman saklanmaz: mikrofon verisi yalnızca cihazda, anlık olarak işlenir. Ayrıntı için <a href="privacy-policy.html">Gizlilik Politikası</a>.</p>
+
+    <h2>İletişim</h2>
+    <p class="mail"><a href="mailto:netdrne@gmail.com?subject=Hesap%20silme%20talebi">netdrne@gmail.com</a></p>
+  </div>
+
+  <!-- ================= ENGLISH ================= -->
+  <div class="lang-content" data-lang="en" dir="ltr">
+    <h1>Account and Data Deletion</h1>
+    <p class="app">App: <strong>Tekâmül</strong> (<code>com.aistudio.tekamul.mystic</code>) — Developer: <strong>netdrne</strong></p>
+
+    <h2>To delete your account entirely</h2>
+    <div class="steps">
+      <ol>
+        <li>Email <strong>netdrne@gmail.com</strong> with the subject <strong>“Account deletion request”</strong>.</li>
+        <li>Include <em>one</em> of the following so we can find your account: the <strong>email address</strong> you use in the app, or your <strong>nickname</strong>.</li>
+        <li>We reply to confirm the request. Deletion is completed <strong>within 30 days</strong>.</li>
+        <li>To erase the data on your phone immediately, uninstall the app or use <em>Settings → Reset all data</em>.</li>
+      </ol>
+    </div>
+
+    <h2>To delete only part of your data, without deleting the account</h2>
+    <ul>
+      <li><strong>Leaderboard entry:</strong> turn off <em>Settings → Appear on the leaderboard</em>. Your entry is removed immediately.</li>
+      <li><strong>On-device data:</strong> <em>Settings → Reset all data</em> — erases progress, dhikr history, journal and reading records.</li>
+      <li><strong>A specific item:</strong> email the address above saying which data you want removed; your account stays open.</li>
+    </ul>
+
+    <h2>What is deleted and what is kept</h2>
+    <table>
+      <tr><th>Data</th><th>What happens</th><th>Timing</th></tr>
+      <tr><td>Identity record (Firebase Authentication)</td><td>Deleted</td><td>Within 30 days</td></tr>
+      <tr><td>Profile record: email, display name, nickname, station, dhikr count, streak, premium status</td><td>Deleted</td><td>Within 30 days</td></tr>
+      <tr><td>Leaderboard entry</td><td>Deleted</td><td>Immediately (via the switch) or within 30 days</td></tr>
+      <tr><td>Nickname reservation</td><td>Released, the name becomes available again</td><td>Within 30 days</td></tr>
+      <tr><td>Local data on the phone</td><td>Erased on uninstall or reset</td><td>Immediately</td></tr>
+      <tr><td>Copies in backups</td><td>Deleted</td><td>Within 90 days</td></tr>
+      <tr><td>Crash reports (Firebase Crashlytics)</td><td>Cannot be linked back to you; expire automatically</td><td>90 days</td></tr>
+      <tr><td>Aggregated / anonymous usage statistics</td><td>Kept, as they cannot be tied to an identity</td><td>—</td></tr>
+      <tr><td>Google Play purchase records</td><td>Held by Google; we have no authority to delete them, for legal and tax reasons</td><td>Per Google's policy</td></tr>
+    </table>
+    <p>Audio is never stored: microphone data is processed on the device in real time only. See the <a href="privacy-policy.html">Privacy Policy</a> for details.</p>
+
+    <h2>Contact</h2>
+    <p class="mail"><a href="mailto:netdrne@gmail.com?subject=Account%20deletion%20request">netdrne@gmail.com</a></p>
+  </div>
+
+  <!-- ================= ARABIC ================= -->
+  <div class="lang-content" data-lang="ar" dir="rtl">
+    <h1>حذف الحساب والبيانات</h1>
+    <p class="app">التطبيق: <strong>تكامُل</strong> (<code>com.aistudio.tekamul.mystic</code>) — المطوّر: <strong>netdrne</strong></p>
+
+    <h2>لحذف حسابك بالكامل</h2>
+    <div class="steps">
+      <ol>
+        <li>أرسل بريدًا إلى <strong>netdrne@gmail.com</strong> بعنوان <strong>«طلب حذف الحساب»</strong>.</li>
+        <li>اذكر <em>أحد</em> هذين لنتمكّن من العثور على حسابك: <strong>البريد الإلكتروني</strong> الذي تستخدمه في التطبيق أو <strong>اسمك المستعار</strong>.</li>
+        <li>نردّ عليك لتأكيد الطلب، ويكتمل الحذف <strong>خلال 30 يومًا</strong>.</li>
+        <li>ولحذف بيانات هاتفك فورًا، أزل التطبيق أو استخدم <em>الإعدادات ← إعادة تعيين جميع البيانات</em>.</li>
+      </ol>
+    </div>
+
+    <h2>لحذف جزء من بياناتك دون حذف الحساب</h2>
+    <ul>
+      <li><strong>سجلّ لوحة الصدارة:</strong> أوقف <em>الإعدادات ← الظهور في لوحة الصدارة</em>، فيُحذف سجلّك فورًا.</li>
+      <li><strong>بيانات الجهاز:</strong> <em>الإعدادات ← إعادة تعيين جميع البيانات</em> — تمسح التقدّم وسجلّ الذكر والمذكرة والقراءة.</li>
+      <li><strong>عنصر محدّد:</strong> راسلنا على العنوان أعلاه موضّحًا ما تريد حذفه، ويبقى حسابك مفتوحًا.</li>
+    </ul>
+
+    <h2>ما يُحذف وما يُحتفظ به</h2>
+    <table>
+      <tr><th>البيانات</th><th>ما يحدث</th><th>المدة</th></tr>
+      <tr><td>سجلّ الهوية (Firebase Authentication)</td><td>يُحذف</td><td>خلال 30 يومًا</td></tr>
+      <tr><td>سجلّ الملف: البريد، الاسم الظاهر، الاسم المستعار، المقام، عدد الأذكار، المداومة، حالة الاشتراك</td><td>يُحذف</td><td>خلال 30 يومًا</td></tr>
+      <tr><td>سجلّ لوحة الصدارة</td><td>يُحذف</td><td>فورًا (بالمفتاح) أو خلال 30 يومًا</td></tr>
+      <tr><td>حجز الاسم المستعار</td><td>يُلغى ويصبح الاسم متاحًا</td><td>خلال 30 يومًا</td></tr>
+      <tr><td>البيانات المحلية على الهاتف</td><td>تُمحى عند الإزالة أو إعادة التعيين</td><td>فورًا</td></tr>
+      <tr><td>النسخ الاحتياطية</td><td>تُحذف</td><td>خلال 90 يومًا كحد أقصى</td></tr>
+      <tr><td>تقارير الأعطال (Firebase Crashlytics)</td><td>لا يمكن ربطها بك، وتنتهي تلقائيًا</td><td>90 يومًا</td></tr>
+      <tr><td>إحصاءات الاستخدام المجمّعة/المجهولة</td><td>يُحتفظ بها لتعذّر ربطها بهوية</td><td>—</td></tr>
+      <tr><td>سجلّات الشراء في Google Play</td><td>تبقى لدى Google، ولا صلاحية لنا بحذفها لأسباب قانونية ومالية</td><td>وفق سياسة Google</td></tr>
+    </table>
+    <p>لا يُحفظ الصوت أبدًا؛ فبيانات الميكروفون تُعالَج على الجهاز آنيًا فقط. للتفاصيل: <a href="privacy-policy.html">سياسة الخصوصية</a>.</p>
+
+    <h2>التواصل</h2>
+    <p class="mail"><a href="mailto:netdrne@gmail.com?subject=Account%20deletion%20request">netdrne@gmail.com</a></p>
+  </div>
+
+  <!-- ================= INDONESIAN ================= -->
+  <div class="lang-content" data-lang="id" dir="ltr">
+    <h1>Penghapusan Akun dan Data</h1>
+    <p class="app">Aplikasi: <strong>Tekâmül</strong> (<code>com.aistudio.tekamul.mystic</code>) — Pengembang: <strong>netdrne</strong></p>
+
+    <h2>Untuk menghapus akun sepenuhnya</h2>
+    <div class="steps">
+      <ol>
+        <li>Kirim email ke <strong>netdrne@gmail.com</strong> dengan subjek <strong>“Permintaan penghapusan akun”</strong>.</li>
+        <li>Sertakan <em>salah satu</em> berikut agar kami dapat menemukan akunmu: <strong>alamat email</strong> yang kamu pakai di aplikasi, atau <strong>nama panggilanmu</strong>.</li>
+        <li>Kami membalas untuk mengonfirmasi. Penghapusan selesai <strong>dalam 30 hari</strong>.</li>
+        <li>Untuk menghapus data di ponsel segera, copot aplikasi atau gunakan <em>Pengaturan → Reset semua data</em>.</li>
+      </ol>
+    </div>
+
+    <h2>Untuk menghapus sebagian data tanpa menghapus akun</h2>
+    <ul>
+      <li><strong>Entri papan peringkat:</strong> matikan <em>Pengaturan → Tampil di papan peringkat</em>. Entrimu langsung dihapus.</li>
+      <li><strong>Data di perangkat:</strong> <em>Pengaturan → Reset semua data</em> — menghapus kemajuan, riwayat zikir, jurnal, dan catatan bacaan.</li>
+      <li><strong>Item tertentu:</strong> kirim email ke alamat di atas dan sebutkan data mana yang ingin dihapus; akunmu tetap aktif.</li>
+    </ul>
+
+    <h2>Apa yang dihapus dan apa yang disimpan</h2>
+    <table>
+      <tr><th>Data</th><th>Yang terjadi</th><th>Waktu</th></tr>
+      <tr><td>Catatan identitas (Firebase Authentication)</td><td>Dihapus</td><td>Dalam 30 hari</td></tr>
+      <tr><td>Catatan profil: email, nama tampilan, nama panggilan, tingkat, jumlah zikir, seri, status premium</td><td>Dihapus</td><td>Dalam 30 hari</td></tr>
+      <tr><td>Entri papan peringkat</td><td>Dihapus</td><td>Segera (lewat sakelar) atau dalam 30 hari</td></tr>
+      <tr><td>Pemesanan nama panggilan</td><td>Dilepas, nama tersedia kembali</td><td>Dalam 30 hari</td></tr>
+      <tr><td>Data lokal di ponsel</td><td>Terhapus saat dicopot atau direset</td><td>Segera</td></tr>
+      <tr><td>Salinan di cadangan</td><td>Dihapus</td><td>Paling lama 90 hari</td></tr>
+      <tr><td>Laporan kerusakan (Firebase Crashlytics)</td><td>Tidak dapat dikaitkan denganmu; kedaluwarsa otomatis</td><td>90 hari</td></tr>
+      <tr><td>Statistik penggunaan agregat/anonim</td><td>Disimpan karena tidak terkait identitas</td><td>—</td></tr>
+      <tr><td>Catatan pembelian Google Play</td><td>Disimpan Google; kami tidak berwenang menghapusnya karena alasan hukum dan pajak</td><td>Sesuai kebijakan Google</td></tr>
+    </table>
+    <p>Suara tidak pernah disimpan: data mikrofon diproses di perangkat secara langsung saja. Detail: <a href="privacy-policy.html">Kebijakan Privasi</a>.</p>
+
+    <h2>Kontak</h2>
+    <p class="mail"><a href="mailto:netdrne@gmail.com?subject=Account%20deletion%20request">netdrne@gmail.com</a></p>
+  </div>
+
+  <!-- ================= URDU ================= -->
+  <div class="lang-content" data-lang="ur" dir="rtl">
+    <h1>اکاؤنٹ اور ڈیٹا کا حذف</h1>
+    <p class="app">ایپ: <strong>تکامل</strong> (<code>com.aistudio.tekamul.mystic</code>) — ڈویلپر: <strong>netdrne</strong></p>
+
+    <h2>اکاؤنٹ مکمل حذف کرانے کے لیے</h2>
+    <div class="steps">
+      <ol>
+        <li><strong>netdrne@gmail.com</strong> پر <strong>«اکاؤنٹ حذف کرنے کی درخواست»</strong> کے عنوان سے ای میل بھیجیں۔</li>
+        <li>اکاؤنٹ تلاش کرنے کے لیے ان میں سے <em>ایک</em> لکھیں: ایپ میں استعمال ہونے والا <strong>ای میل</strong> یا آپ کا <strong>عرفی نام</strong>۔</li>
+        <li>ہم تصدیق کا جواب بھیجتے ہیں، اور حذف <strong>30 دن کے اندر</strong> مکمل ہو جاتا ہے۔</li>
+        <li>فون کا ڈیٹا فوراً مٹانے کے لیے ایپ ان انسٹال کریں یا <em>ترتیبات ← تمام ڈیٹا ری سیٹ کریں</em> استعمال کریں۔</li>
+      </ol>
+    </div>
+
+    <h2>اکاؤنٹ حذف کیے بغیر کچھ ڈیٹا مٹانے کے لیے</h2>
+    <ul>
+      <li><strong>لیڈر بورڈ اندراج:</strong> <em>ترتیبات ← لیڈر بورڈ پر ظاہر ہوں</em> بند کریں؛ اندراج فوراً حذف ہو جاتا ہے۔</li>
+      <li><strong>ڈیوائس کا ڈیٹا:</strong> <em>ترتیبات ← تمام ڈیٹا ری سیٹ کریں</em> — پیش رفت، ذکر کی تاریخ، ڈائری اور تلاوت کے ریکارڈ مٹاتا ہے۔</li>
+      <li><strong>مخصوص ڈیٹا:</strong> اوپر دیے پتے پر لکھیں کہ کیا حذف کرانا ہے؛ اکاؤنٹ کھلا رہے گا۔</li>
+    </ul>
+
+    <h2>کیا حذف ہوتا ہے اور کیا رکھا جاتا ہے</h2>
+    <table>
+      <tr><th>ڈیٹا</th><th>کیا ہوتا ہے</th><th>مدت</th></tr>
+      <tr><td>شناختی ریکارڈ (Firebase Authentication)</td><td>حذف</td><td>30 دن کے اندر</td></tr>
+      <tr><td>پروفائل ریکارڈ: ای میل، ظاہری نام، عرفی نام، درجہ، ذکر کی تعداد، تسلسل، پریمیم حیثیت</td><td>حذف</td><td>30 دن کے اندر</td></tr>
+      <tr><td>لیڈر بورڈ اندراج</td><td>حذف</td><td>فوراً (سوئچ سے) یا 30 دن میں</td></tr>
+      <tr><td>عرفی نام کی مخصوصیت</td><td>ختم، نام دوبارہ دستیاب</td><td>30 دن کے اندر</td></tr>
+      <tr><td>فون کا مقامی ڈیٹا</td><td>ان انسٹال یا ری سیٹ پر مٹ جاتا ہے</td><td>فوراً</td></tr>
+      <tr><td>بیک اپ میں نقول</td><td>حذف</td><td>زیادہ سے زیادہ 90 دن</td></tr>
+      <tr><td>کریش رپورٹس (Firebase Crashlytics)</td><td>آپ سے منسوب نہیں ہو سکتیں؛ خودکار ختم</td><td>90 دن</td></tr>
+      <tr><td>مجموعی/گمنام استعمال کے اعداد</td><td>شناخت سے نہ جڑنے کے سبب محفوظ</td><td>—</td></tr>
+      <tr><td>Google Play خریداری کے ریکارڈ</td><td>Google کے پاس رہتے ہیں؛ قانونی و مالی وجوہات سے ہمیں حذف کا اختیار نہیں</td><td>Google کی پالیسی کے مطابق</td></tr>
+    </table>
+    <p>آواز کبھی محفوظ نہیں ہوتی: مائیکروفون ڈیٹا صرف ڈیوائس پر فوری پروسیس ہوتا ہے۔ تفصیل: <a href="privacy-policy.html">پرائیویسی پالیسی</a>۔</p>
+
+    <h2>رابطہ</h2>
+    <p class="mail"><a href="mailto:netdrne@gmail.com?subject=Account%20deletion%20request">netdrne@gmail.com</a></p>
+  </div>
+
+  <!-- ================= JAPANESE ================= -->
+  <div class="lang-content" data-lang="ja" dir="ltr">
+    <h1>アカウントとデータの削除</h1>
+    <p class="app">アプリ: <strong>テカミュル（Tekâmül）</strong>（<code>com.aistudio.tekamul.mystic</code>） — 開発者: <strong>netdrne</strong></p>
+
+    <h2>アカウントを完全に削除する</h2>
+    <div class="steps">
+      <ol>
+        <li>件名を<strong>「アカウント削除のご依頼」</strong>として <strong>netdrne@gmail.com</strong> までメールをお送りください。</li>
+        <li>アカウント特定のため、次の<em>いずれか</em>をご記入ください: アプリでお使いの<strong>メールアドレス</strong>、または<strong>ニックネーム</strong>。</li>
+        <li>確認の返信をお送りし、削除は<strong>30 日以内</strong>に完了します。</li>
+        <li>端末内のデータをすぐ消すには、アプリをアンインストールするか<em>設定 → すべてのデータをリセット</em>をご利用ください。</li>
+      </ol>
+    </div>
+
+    <h2>アカウントを残したまま一部のデータだけ削除する</h2>
+    <ul>
+      <li><strong>ランキング登録:</strong> <em>設定 → ランキングに表示する</em> をオフにすると、登録は即座に削除されます。</li>
+      <li><strong>端末内データ:</strong> <em>設定 → すべてのデータをリセット</em> — 進捗、ズィクル履歴、日記、読誦記録を消去します。</li>
+      <li><strong>特定の項目:</strong> 上記アドレスへ削除したいデータをご連絡ください。アカウントはそのまま残ります。</li>
+    </ul>
+
+    <h2>削除されるものと保持されるもの</h2>
+    <table>
+      <tr><th>データ</th><th>取り扱い</th><th>期間</th></tr>
+      <tr><td>認証情報（Firebase Authentication）</td><td>削除</td><td>30 日以内</td></tr>
+      <tr><td>プロフィール: メール、表示名、ニックネーム、段位、ズィクル数、連続日数、プレミアム状態</td><td>削除</td><td>30 日以内</td></tr>
+      <tr><td>ランキング登録</td><td>削除</td><td>即時（設定から）または 30 日以内</td></tr>
+      <tr><td>ニックネームの確保</td><td>解放され、再び利用可能になります</td><td>30 日以内</td></tr>
+      <tr><td>端末内のローカルデータ</td><td>アンインストールまたはリセットで消去</td><td>即時</td></tr>
+      <tr><td>バックアップ内の複製</td><td>削除</td><td>最長 90 日</td></tr>
+      <tr><td>クラッシュレポート（Firebase Crashlytics）</td><td>個人に紐づけられず、自動的に期限切れ</td><td>90 日</td></tr>
+      <tr><td>集計・匿名の利用統計</td><td>個人に紐づかないため保持</td><td>—</td></tr>
+      <tr><td>Google Play の購入記録</td><td>Google が保持。法務・税務上の理由により当方に削除権限はありません</td><td>Google のポリシーに準拠</td></tr>
+    </table>
+    <p>音声は一切保存されません。マイクのデータは端末上でリアルタイムに処理されるのみです。詳細は<a href="privacy-policy.html">プライバシーポリシー</a>をご覧ください。</p>
+
+    <h2>お問い合わせ</h2>
+    <p class="mail"><a href="mailto:netdrne@gmail.com?subject=Account%20deletion%20request">netdrne@gmail.com</a></p>
+  </div>
+
+<script>
+  function setLang(code) {
+    document.querySelectorAll('.lang-content').forEach(function (el) {
+      el.classList.toggle('active', el.dataset.lang === code);
+    });
+    document.querySelectorAll('.lang-switch button').forEach(function (b) {
+      b.classList.toggle('sel', b.dataset.b === code);
+    });
+    var rtl = (code === 'ar' || code === 'ur');
+    document.documentElement.lang = code;
+    document.documentElement.dir = rtl ? 'rtl' : 'ltr';
+    try { history.replaceState(null, '', '#' + code); } catch (e) {}
+  }
+  (function () {
+    var want = (location.hash || '').replace('#', '');
+    if (!want) {
+      var nav = (navigator.language || 'en').slice(0, 2).toLowerCase();
+      want = ({ tr: 'tr', ar: 'ar', id: 'id', in: 'id', ur: 'ur', ja: 'ja' })[nav] || 'en';
+    }
+    if (document.querySelector('.lang-content[data-lang="' + want + '"]')) setLang(want);
+  })();
+</script>
+</body>
+</html>
